@@ -1,4 +1,5 @@
 @import './styles/_default.scss';
+@import './styles/_variables.scss';
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
