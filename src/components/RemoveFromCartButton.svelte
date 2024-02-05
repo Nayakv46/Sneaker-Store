@@ -1,41 +1,14 @@
 <script>
-import ProductsStore from "../assets/store";
+    import { removeSingleProduct } from "../assets/store";
 
-export let id;
+    export let id;
 
-const handleProductDelete = (id) => {
-    ProductsStore.update((currentStore) => {
-        return currentStore.filter((product) => product.productId !== id )
-    })
-}
 </script>
 
-<button class="button-removeFromCart" type="button" on:click={() => handleProductDelete(id)}>
-    X
+<button type="button" on:click={() => removeSingleProduct(id)} >
+    -
 </button>
 
-<style lang="scss">
-    .button-removeFromCart {
-        display: flex;
-        justify-content: center;
-        width: max-content;
-        padding: 1rem;
-        color: var(--white300);
-        font-weight: 600;
-        border: 0.1rem solid var(--white300);
-        border-radius: 0.8rem;
-        background-color: var(--black500);
-        transition: var(--transition);
-        cursor: pointer;
+<style>
 
-        &:hover {
-            color: var(--black500);
-            border: 0.1rem solid var(--black500);
-            background-color: var(--white300);
-        }
-
-        &:active {
-            transform: scale(0.92);
-        }
-    }
 </style>

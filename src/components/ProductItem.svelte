@@ -1,9 +1,13 @@
 <script>
     import AddToCartButton from "./AddToCartButton.svelte";
+  import RemoveAllFromCartButton from "./RemoveAllFromCartButton.svelte";
   import RemoveFromCartButton from "./RemoveFromCartButton.svelte";
+  import UpdateProductNumber from "./UpdateProductNumber.svelte";
 
     export let product;
     let { id, name, description, price } = product;
+
+    let numberOfItems = 1;
 </script>
 
 <div class="product">
@@ -19,8 +23,12 @@
     {price}
   </div>
 
-  <AddToCartButton id={id} />
-  <RemoveFromCartButton id={id} />
+  <input type="number" bind:value={numberOfItems} />
+
+  <AddToCartButton id={id} numberOfItems={numberOfItems} />
+    Remove All:  <RemoveAllFromCartButton id={id} />
+    Remove Single: <RemoveFromCartButton id={id} />
+    Input: <UpdateProductNumber id={id} />
 </div>
 
 <style>

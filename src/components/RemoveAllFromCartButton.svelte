@@ -1,27 +1,24 @@
 <script>
-    import { addProduct, addMultipleProducts } from "../assets/store";
-    export let id;
-    export let numberOfItems;
+import { removeAllProduct } from "../assets/store";
+
+export let id;
 
 </script>
-<!-- on:click={() => addProduct(id)} -->
 
-<button type="button" class="button-addToCart" 
-    on:click={() => addMultipleProducts(id, numberOfItems)}
-    >
-    Add to Cart
+<button class="button-removeFromCart" type="button" on:click={() => removeAllProduct(id)}>
+    X
 </button>
 
 <style lang="scss">
-    .button-addToCart {
+    .button-removeFromCart {
         display: flex;
         justify-content: center;
         width: max-content;
-        padding: 1rem 1.8rem;
+        padding: 1rem;
         color: var(--white300);
         font-weight: 600;
         border: 0.1rem solid var(--white300);
-        border-radius: 1.8rem;
+        border-radius: 0.8rem;
         background-color: var(--black500);
         transition: var(--transition);
         cursor: pointer;
