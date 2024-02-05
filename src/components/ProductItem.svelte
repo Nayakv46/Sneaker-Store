@@ -1,5 +1,6 @@
 <script>
     import AddToCartButton from "./AddToCartButton.svelte";
+  import RemoveFromCartButton from "./RemoveFromCartButton.svelte";
 
     export let product;
     let { id, name, description, price } = product;
@@ -19,6 +20,7 @@
   </div>
 
   <AddToCartButton id={id} />
+  <RemoveFromCartButton id={id} />
 </div>
 
 <style>

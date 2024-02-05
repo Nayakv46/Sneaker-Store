@@ -18,14 +18,14 @@
                 };
 
                 // return the store with newly added product
-                return [addedProduct, ...currentStore];
+                return [addedProduct, ...copiedStore];
 
             } else {
 
                 // increase the number of chosen item in the store
                 result.numberOfItems++;
 
-                return currentStore;
+                return copiedStore;
             }
 
         });
