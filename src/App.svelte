@@ -3,7 +3,11 @@
   import ProductItem from "./components/ProductItem.svelte";
 
   import { ProductsStore } from "./stores/store";
+
+  import Navbar from "./containers/Navbar.svelte";
 </script>
+
+<Navbar />
 
 <main class="hero">
   Shoe store
