@@ -1,4 +1,5 @@
 <script>
+  import AddMultipleToCart from "./AddMultipleToCart.svelte";
     import AddToCartButton from "./AddToCartButton.svelte";
   import RemoveAllFromCartButton from "./RemoveAllFromCartButton.svelte";
   import RemoveFromCartButton from "./RemoveFromCartButton.svelte";
@@ -23,9 +24,10 @@
     {price}
   </div>
 
+  Add Multiple Items: <AddMultipleToCart id={id} numberOfItems={numberOfItems} />
   <input type="number" bind:value={numberOfItems} />
 
-  <AddToCartButton id={id}  />
+    Add Single Item: <AddToCartButton id={id}  />
     Remove All:  <RemoveAllFromCartButton id={id} />
     Remove Single: <RemoveFromCartButton id={id} />
     Input: <UpdateProductNumber id={id} />

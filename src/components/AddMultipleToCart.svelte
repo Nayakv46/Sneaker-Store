@@ -1,11 +1,11 @@
 <script>
-    import { addProduct } from "../stores/store";
+    import { addMultipleProducts } from "../stores/store";
     export let id;
+    export let numberOfItems;
 
 </script>
-
 <button type="button" class="button-addToCart"
-    on:click={() => addProduct(id)}
+    on:click={() => addMultipleProducts(id, numberOfItems)}
     >
     Add to Cart
 </button>

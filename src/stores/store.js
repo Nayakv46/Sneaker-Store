@@ -7,7 +7,6 @@ export function addProduct(id) {
         let copiedStore = [...currentStore];
 
         let result = copiedStore.find(({ productId }) => productId === id )
-        console.log(id)
         // if there is no result found
         if ( result === undefined) {
 
