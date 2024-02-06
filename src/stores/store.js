@@ -44,6 +44,17 @@ export function removeSingleProduct(item) {
 
         let result = copiedStore.find(({ id }) => id === item.id);
 
+        // -------------------------------------
+
+        // CHECK IF REMOVING ITEM BY BOTH INPUT AND BUTTON CAN MAKE THE NUMBER OF ITEMS NEGATIVE
+        // THEN REMOVE THE ITEM ALTOGETHER FROM THE STORE !!!!!!!!!!!!!!!
+        // FROM BOTH INPUTS
+        // UPDATEPRODUCT
+        // ADDMULTIPLEPRODUCT
+        // validate workign from sideCart
+
+        // -------------------------------------
+
         // if the product is not found in store
         if ( result === undefined ) {
             // return unchanged store
@@ -53,7 +64,7 @@ export function removeSingleProduct(item) {
             result.numberOfItems--;
 
             // if there are no more chosen items, remove it from the store
-            if (result.numberOfItems === 0){
+            if (result.numberOfItems < 1){
                 return copiedStore.filter((product) => product.id !== item.id);
             } else {
                 return copiedStore;
@@ -70,9 +81,10 @@ export function updateProductCount(item, amount) {
         let result = copiedStore.find(({ id }) => id === item.id);
 
         // anti funny customer
-        if (amount < 0) {
-            result.numberOfItems = 0;
-        } else {
+        if (amount < 1) {
+            // result.numberOfItems = 0;
+            return currentStore.filter((product) => product.id !== item.id )
+        } else if (amount > 0) {
             // set the input value to store
             result.numberOfItems = amount;
         }
@@ -88,17 +100,19 @@ export function addMultipleProducts(item, amount) {
 
         let result = copiedStore.find(({ id }) => id === item.id);
 
-        if ( result ) {
-            result.numberOfItems += amount;
-        } else {
-            let addedProduct = {
-                id: item.id,
-                numberOfItems: amount,
-                name: item.name,
-                price: item.price,
-            };
+        if ( amount > 0) {
+            if ( result ) {
+                result.numberOfItems += amount;
+            } else {
+                let addedProduct = {
+                    id: item.id,
+                    numberOfItems: amount,
+                    name: item.name,
+                    price: item.price,
+                };
 
-            return [addedProduct, ...copiedStore];
+                return [addedProduct, ...copiedStore];
+            }
         }
 
         return copiedStore;
