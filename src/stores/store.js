@@ -2,18 +2,20 @@ import { localStore } from './localStore';
 
 export const ProductsStore = localStore("localStore", []);
 
-export function addProduct(id) {
+export function addProduct(item) {
+
     ProductsStore.update((currentStore) => {
         let copiedStore = [...currentStore];
-
-        let result = copiedStore.find(({ productId }) => productId === id )
+        let result = copiedStore.find(({ id }) => id === item.id )
         // if there is no result found
         if ( result === undefined) {
 
             // create products object to be added into store
             let addedProduct = {
-                productId: id,
+                id: item.id,
                 numberOfItems: 1,
+                name: item.name,
+                price: item.price,
             };
 
             // return the store with newly added product
@@ -29,18 +31,18 @@ export function addProduct(id) {
     });
 }
 
-export function removeAllProduct(id) {
+export function removeAllProduct(item) {
     ProductsStore.update((currentStore) => {
         // return the filtered store without item of chosen id
-        return currentStore.filter((product) => product.productId !== id )
+        return currentStore.filter((product) => product.id !== item.id )
     })
 }
 
-export function removeSingleProduct(id) {
+export function removeSingleProduct(item) {
     ProductsStore.update((currentStore) => {
         let copiedStore = [...currentStore];
 
-        let result = copiedStore.find(({ productId }) => productId === id);
+        let result = copiedStore.find(({ id }) => id === item.id);
 
         // if the product is not found in store
         if ( result === undefined ) {
@@ -52,7 +54,7 @@ export function removeSingleProduct(id) {
 
             // if there are no more chosen items, remove it from the store
             if (result.numberOfItems === 0){
-                return copiedStore.filter((product) => product.productId !== id);
+                return copiedStore.filter((product) => product.id !== item.id);
             } else {
                 return copiedStore;
             }
@@ -61,11 +63,11 @@ export function removeSingleProduct(id) {
     })
 }
 
-export function updateProductCount(id, amount) {
+export function updateProductCount(item, amount) {
     ProductsStore.update((currentStore) => {
         let copiedStore = [...currentStore];
 
-        let result = copiedStore.find(({ productId }) => productId === id);
+        let result = copiedStore.find(({ id }) => id === item.id);
 
         // anti funny customer
         if (amount < 0) {
@@ -79,18 +81,21 @@ export function updateProductCount(id, amount) {
     })
 }
 
-export function addMultipleProducts(id, amount) {
+export function addMultipleProducts(item, amount) {
+
     ProductsStore.update((currentStore) => {
         let copiedStore = [...currentStore];
 
-        let result = copiedStore.find(({ productId }) => productId === id);
+        let result = copiedStore.find(({ id }) => id === item.id);
 
         if ( result ) {
             result.numberOfItems += amount;
         } else {
             let addedProduct = {
-                productId: id,
-                numberOfItems: amount
+                id: item.id,
+                numberOfItems: amount,
+                name: item.name,
+                price: item.price,
             };
 
             return [addedProduct, ...copiedStore];

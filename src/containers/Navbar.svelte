@@ -1,8 +1,24 @@
 <script>
+    import { ProductsStore } from '../stores/store';
+
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import RiShoppingCartLine from 'svelte-icons-pack/ri/RiFinanceShoppingCartLine';
 
     import Logo from '../assets/images/Sneaker-store-logo.png';
+    import SideCart from './SideCart.svelte';
+
+    let showCart = false;
+
+    const toggleCart = () => {
+        showCart = !showCart;
+    }
+
+    let itemsNumber;
+
+    $: itemsNumber = $ProductsStore.reduce((accumulator, object) => {
+        return accumulator + object.numberOfItems;
+    }, 0);
+
 </script>
 
 <nav class="navbar">
@@ -23,26 +39,38 @@
             </li>
         </ul>
 
-        <div class="navbar__cta">
-            <Icon src={RiShoppingCartLine} color="black" size="32" className="navbar__cta-cart" />
-        </div>
+        <button type="button" on:click={() => toggleCart()} class="navbar__cta">
+            <Icon src={RiShoppingCartLine}
+                color="black"
+                size="32"
+                class="navbar__cta-cart"
+            />
+            <span class="navbar__cta-itemsNo">{itemsNumber}</span>
+        </button>
     </div>
 </nav>
 
+<SideCart toggleCart={toggleCart} {showCart} />
 
 <style lang="scss">
     .navbar {
+        position: fixed;
+        left: 0;
+        top: 0;
         display: flex;
         justify-content: center;
-        border: 0.1rem solid red;
-        
+        width: 100%;
+        padding: 1rem 2rem;
+        background-color: var(--white600);
+        border-bottom: 0.4rem solid var(--black600);
+
+
         &__content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
             max-width: var(--max-width);
-            border: 0.1rem solid blue;
         }
 
         &__logo {
@@ -98,7 +126,35 @@
         }
 
         &__cta {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.7rem;
+            background-color: rgba(0,0,0,0);
+            border: none;
+            border-radius: 50%;
             cursor: pointer;
+            transition: var(--transition);
+
+            &:hover {
+                background-color: rgba(0,0,0,0.1);
+            }
+
+            &-itemsNo {
+                position: absolute;
+                top: 0.2rem;
+                right: 0.4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2.2rem;
+                height: 2.2rem;
+                background-color: var(--red400);
+                color: var(--white400);
+                font-weight: 500;
+                border-radius: 50%;
+            }
         }
     }
 </style>

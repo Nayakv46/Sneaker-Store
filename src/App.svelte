@@ -10,7 +10,6 @@
 <Navbar />
 
 <main class="hero">
-  Shoe store
 
   <div class="product__wrapper">
 

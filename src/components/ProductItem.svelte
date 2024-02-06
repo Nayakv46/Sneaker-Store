@@ -24,13 +24,13 @@
     {price}
   </div>
 
-  Add Multiple Items: <AddMultipleToCart id={id} numberOfItems={numberOfItems} />
+  Add Multiple Items: <AddMultipleToCart item={product} numberOfItems={numberOfItems} />
   <input type="number" bind:value={numberOfItems} />
 
-    Add Single Item: <AddToCartButton id={id}  />
-    Remove All:  <RemoveAllFromCartButton id={id} />
-    Remove Single: <RemoveFromCartButton id={id} />
-    Input: <UpdateProductNumber id={id} />
+    Add Single Item: <AddToCartButton item={product}  />
+    Remove All:  <RemoveAllFromCartButton item={product} />
+    Remove Single: <RemoveFromCartButton item={product} />
+    Input: <UpdateProductNumber item={product} />
 </div>
 
 <style>

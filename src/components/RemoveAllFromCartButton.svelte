@@ -1,11 +1,11 @@
 <script>
 import { removeAllProduct } from "../stores/store";
 
-export let id;
+export let item;
 
 </script>
 
-<button class="button-removeFromCart" type="button" on:click={() => removeAllProduct(id)}>
+<button class="button-removeFromCart" type="button" on:click={() => removeAllProduct(item)}>
     X
 </button>
 
