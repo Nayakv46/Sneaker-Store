@@ -1,5 +1,5 @@
 <script>
-    import { removeSingleProduct } from "../assets/store";
+    import { removeSingleProduct } from "../stores/store";
 
     export let id;
 

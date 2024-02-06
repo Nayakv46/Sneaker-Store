@@ -2,7 +2,7 @@
   import Products from "./assets/Products";
   import ProductItem from "./components/ProductItem.svelte";
 
-  import ProductsStore from "./assets/store";
+  import { ProductsStore } from "./stores/store";
 </script>
 
 <main class="hero">
@@ -31,7 +31,7 @@
   }
 
   .product {
-    
+
     &__wrapper {
       display: flex;
       flex-direction: column;

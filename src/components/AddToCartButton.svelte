@@ -1,13 +1,13 @@
 <script>
-    import { addProduct, addMultipleProducts } from "../assets/store";
+    import { addProduct, addMultipleProducts } from "../stores/store";
     export let id;
-    export let numberOfItems;
+    // export let numberOfItems;
 
 </script>
 <!-- on:click={() => addProduct(id)} -->
 
-<button type="button" class="button-addToCart" 
-    on:click={() => addMultipleProducts(id, numberOfItems)}
+<button type="button" class="button-addToCart"
+    on:click={() => addProduct(id)}
     >
     Add to Cart
 </button>

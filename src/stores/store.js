@@ -1,22 +1,13 @@
-import { writable } from 'svelte/store';
+import { localStore } from './localStore';
 
-
-
-const ProductsStore = writable([
-        {
-            productId: 1,
-            numberOfItems: 2,
-        }
-    ]);
-
-export default ProductsStore;
+export const ProductsStore = localStore("localStore", []);
 
 export function addProduct(id) {
     ProductsStore.update((currentStore) => {
         let copiedStore = [...currentStore];
 
         let result = copiedStore.find(({ productId }) => productId === id )
-
+        console.log(id)
         // if there is no result found
         if ( result === undefined) {
 

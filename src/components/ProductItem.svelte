@@ -25,7 +25,7 @@
 
   <input type="number" bind:value={numberOfItems} />
 
-  <AddToCartButton id={id} numberOfItems={numberOfItems} />
+  <AddToCartButton id={id}  />
     Remove All:  <RemoveAllFromCartButton id={id} />
     Remove Single: <RemoveFromCartButton id={id} />
     Input: <UpdateProductNumber id={id} />
