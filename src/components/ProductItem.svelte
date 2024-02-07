@@ -13,7 +13,9 @@
 
 <div class="product">
   <div class="product__name">
-    {name}
+    <a href={`/product/${id}`}>
+      {name}
+    </a>
   </div>
 
   <div class="product__description">

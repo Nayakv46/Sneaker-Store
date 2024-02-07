@@ -92,7 +92,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: hsla(0%, 0%, 7%, 0.36);
+            background-color: rgba(18, 18, 18, 0.36);
             -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
             z-index: 999;

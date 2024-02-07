@@ -1,6 +1,10 @@
 <script>
     import { ProductsStore } from '../stores/store';
 
+    import { Router, Link, Route } from 'svelte-routing';
+
+    import Index from "../routes/index.svelte";
+
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import RiShoppingCartLine from 'svelte-icons-pack/ri/RiFinanceShoppingCartLine';
 

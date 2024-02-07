@@ -1,45 +1,28 @@
 <script>
-  import Products from "./assets/Products";
-  import ProductItem from "./components/ProductItem.svelte";
+  // import Products from "./assets/Products";
+  // import ProductItem from "./components/ProductItem.svelte";
 
-  import { ProductsStore } from "./stores/store";
+  // import { ProductsStore } from "./stores/store";
 
   import Navbar from "./containers/Navbar.svelte";
+
+  import { Router, Link, Route } from 'svelte-routing'
+  import Index from "./routes/index.svelte";
+  import Featured from "./routes/category/Featured.svelte";
+  import Men from "./routes/category/Men.svelte";
+  import Women from "./routes/category/Women.svelte";
+  import ProductPage from "./routes/ProductPage.svelte";
 </script>
 
 <Navbar />
 
-<main class="hero">
+<Router>
+  <Route path="/" component={Index} />
+  <Route path="/featured" component={Featured} />
+  <Route path="/men" component={Men} />
+  <Route path="/women" component={Women} />
 
-  <div class="product__wrapper">
-
-    {#each Products as product (product.id)}
-      <ProductItem product={product} />
-    {/each}
-  </div>
-
-  {JSON.stringify($ProductsStore)}
-
-</main>
-
-<style lang="scss">
-  .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    min-height: 100svh;
-    min-height: 100vh;
-  }
-
-  .product {
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      border: 0.1rem solid var(--blue400);
-    }
-  }
-</style>
+  <Route path="/product/:id" let:params>
+    <ProductPage id="{params.id}" />
+  </Route>
+</Router>
