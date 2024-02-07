@@ -8,7 +8,13 @@
 <button
     class="productPage__addToCartButton"
     type="submit"
-    on:click={() => addProduct(item, size)}
+    on:click={() => {
+        if (size){
+            addProduct(item, size);
+        } else {
+            alert('Select your size!');
+        }
+    }}
 >
     Add to cart
 </button>
