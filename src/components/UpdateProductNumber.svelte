@@ -6,7 +6,7 @@
 
     let itemInCart;
 
-    $: itemInCart = $ProductsStore.find((product) => product.id == item.id);
+    $: itemInCart = $ProductsStore.find((product) => product.id == item.id && product.size == item.size);
 
 </script>
 

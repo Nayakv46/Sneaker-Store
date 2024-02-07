@@ -65,7 +65,7 @@
         justify-content: center;
         width: 100%;
         padding: 1rem 2rem;
-        background-color: var(--white600);
+        background-color: var(--white700);
         border-bottom: 0.4rem solid var(--black600);
 
 

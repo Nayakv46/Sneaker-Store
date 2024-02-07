@@ -10,7 +10,7 @@
     import RemoveFromCartButton from "./RemoveFromCartButton.svelte";
     import UpdateProductNumber from "./UpdateProductNumber.svelte";
   import RemoveAllFromCartButton from "./RemoveAllFromCartButton.svelte";
-    let { productId, name, description, price } = product;
+    let { id, size, name, description, price } = product;
 
     let itemsInStore;
 </script>
@@ -22,7 +22,11 @@
 
     <div class="sideCartItem__content">
         <div class="sideCartItem__content-top">
-            <p class="sideCartItem__content-name">{name}</p>
+            <div class="sideCartItem__content-details">
+                <a href={`/product/${id}`} class="sideCartItem__content-name">{name}</a>
+
+                <p>Size: {size}</p>
+            </div>
 
             <RemoveAllFromCartButton item={product} />
         </div>
@@ -74,7 +78,7 @@
             }
 
             &-name {
-                color: var(--black500);
+                color: var(--black700);
                 font-weight: 600;
             }
 

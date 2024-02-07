@@ -18,6 +18,7 @@ export let item;
 <style lang="scss">
     .button-removeFromCart {
         display: flex;
+        height: max-content;
         font-size: 2.4rem;
         background: none;
         border: rgba(0,0,0,0);

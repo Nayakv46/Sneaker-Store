@@ -28,11 +28,11 @@
 
   Add Multiple Items: <AddMultipleToCart item={product} numberOfItems={numberOfItems} />
   <input type="number" bind:value={numberOfItems} min="0"/>
-
+<!-- 
     Add Single Item: <AddToCartButton item={product}  />
     Remove All:  <RemoveAllFromCartButton item={product} />
     Remove Single: <RemoveFromCartButton item={product} />
-    Input: <UpdateProductNumber item={product} />
+    Input: <UpdateProductNumber item={product} /> -->
 </div>
 
 <style>

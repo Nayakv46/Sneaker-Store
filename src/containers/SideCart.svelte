@@ -37,7 +37,7 @@
             </p>
 
             <div class="sideCart__items">
-                {#each $ProductsStore as product (product.id)}
+                {#each $ProductsStore as product (product.id+product.size)}
                     <!-- {JSON.stringify(product)} -->
                     <SideCartItem {product} />
                 {/each}

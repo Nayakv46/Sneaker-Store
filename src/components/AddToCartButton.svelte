@@ -9,7 +9,7 @@
 </script>
 
 <button type="button" class="button-addToCart"
-    on:click={() => addProduct(item)}
+    on:click={() => addProduct(item, item.size)}
     >
     <Icon src={FaPlus}  className="button-addToCart-icon" />
 </button>
