@@ -1,36 +1,32 @@
 <script>
 import { removeAllProduct } from "../stores/store";
 
+import Icon from 'svelte-icons-pack/Icon.svelte';
+import IoClose from 'svelte-icons-pack/io/IoClose';
+
+
 export let item;
+
+
 
 </script>
 
 <button class="button-removeFromCart" type="button" on:click={() => removeAllProduct(item)}>
-    X
+    <Icon src={IoClose} />
 </button>
 
 <style lang="scss">
     .button-removeFromCart {
         display: flex;
-        justify-content: center;
-        width: max-content;
-        padding: 1rem;
-        color: var(--white300);
-        font-weight: 600;
-        border: 0.1rem solid var(--white300);
-        border-radius: 0.8rem;
-        background-color: var(--black500);
+        font-size: 2.4rem;
+        background: none;
+        border: rgba(0,0,0,0);
+        border-radius: 50%;
         transition: var(--transition);
         cursor: pointer;
 
         &:hover {
-            color: var(--black500);
-            border: 0.1rem solid var(--black500);
-            background-color: var(--white300);
-        }
-
-        &:active {
-            transform: scale(0.92);
+            background: rgba(0,0,0,0.15);
         }
     }
 </style>

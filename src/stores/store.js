@@ -44,17 +44,6 @@ export function removeSingleProduct(item) {
 
         let result = copiedStore.find(({ id }) => id === item.id);
 
-        // -------------------------------------
-
-        // CHECK IF REMOVING ITEM BY BOTH INPUT AND BUTTON CAN MAKE THE NUMBER OF ITEMS NEGATIVE
-        // THEN REMOVE THE ITEM ALTOGETHER FROM THE STORE !!!!!!!!!!!!!!!
-        // FROM BOTH INPUTS
-        // UPDATEPRODUCT
-        // ADDMULTIPLEPRODUCT
-        // validate workign from sideCart
-
-        // -------------------------------------
-
         // if the product is not found in store
         if ( result === undefined ) {
             // return unchanged store

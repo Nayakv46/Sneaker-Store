@@ -38,7 +38,7 @@
 
             <div class="sideCart__items">
                 {#each $ProductsStore as product (product.id)}
-                    {JSON.stringify(product)}
+                    <!-- {JSON.stringify(product)} -->
                     <SideCartItem {product} />
                 {/each}
             </div>
@@ -73,7 +73,7 @@
         height: 100dvh;
         width: 40rem;
         padding: 2rem;
-        background-color: #fff;
+        background-color: var(--white700);
         border-left: 0.4rem solid var(--black600);
         transition: var(--transition);
         z-index: 1000;
@@ -123,6 +123,7 @@
             flex-direction: column;
             gap: 2rem;
             width: 100%;
+            overflow-x: hidden;
             overflow-y: auto;
         }
 
