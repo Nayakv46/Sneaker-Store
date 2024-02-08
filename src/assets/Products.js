@@ -35,6 +35,18 @@ import SBVertebrae_6 from '../assets/productImages/NikeSBVertebrae/sb_vertebrae_
 import SBVertebrae_7 from '../assets/productImages/NikeSBVertebrae/sb_vertebrae_7.png';
 import SBVertebrae_8 from '../assets/productImages/NikeSBVertebrae/sb_vertebrae_8.png';
 
+import Ja1Fly_1 from '../assets/productImages/Ja1Fly/ja_1_fly_1.png';
+import Ja1Fly_2 from '../assets/productImages/Ja1Fly/ja_1_fly_2.png';
+import Ja1Fly_3 from '../assets/productImages/Ja1Fly/ja_1_fly_3.png';
+import Ja1Fly_4 from '../assets/productImages/Ja1Fly/ja_1_fly_4.jpg';
+import Ja1Fly_5 from '../assets/productImages/Ja1Fly/ja_1_fly_5.png';
+import Ja1Fly_6 from '../assets/productImages/Ja1Fly/ja_1_fly_6.png';
+import Ja1Fly_7 from '../assets/productImages/Ja1Fly/ja_1_fly_7.jpg';
+import Ja1Fly_8 from '../assets/productImages/Ja1Fly/ja_1_fly_8.jpg';
+import Ja1Fly_9 from '../assets/productImages/Ja1Fly/ja_1_fly_9.jpg';
+import Ja1Fly_10 from '../assets/productImages/Ja1Fly/ja_1_fly_10.jpg';
+import Ja1Fly_11 from '../assets/productImages/Ja1Fly/ja_1_fly_11.png';
+
 const Products = [
     {
         id: 1,
@@ -44,7 +56,8 @@ const Products = [
         price: 64.99,
         sizes: [38, 38.5, 39, 39.5, 40, 40.5, 41, 41.5, 42, 43, 44],
         sex: 'male',
-        images: [NikeDownshifter12_1,NikeDownshifter12_2,NikeDownshifter12_3,NikeDownshifter12_4,NikeDownshifter12_5,NikeDownshifter12_6,NikeDownshifter12_7,NikeDownshifter12_8]
+        images: [NikeDownshifter12_1,NikeDownshifter12_2,NikeDownshifter12_3,NikeDownshifter12_4,NikeDownshifter12_5,NikeDownshifter12_6,NikeDownshifter12_7,NikeDownshifter12_8],
+        featured: false,
     },
     {
         id: 2,
@@ -54,16 +67,18 @@ const Products = [
         price: 134.99,
         sizes: [38, 40.5, 41, 42, 42.5, 43, 43.5, 45, 46],
         sex: 'male',
-        images: [NikeAirForce107LX_1, NikeAirForce107LX_2, NikeAirForce107LX_3, NikeAirForce107LX_4, NikeAirForce107LX_5, NikeAirForce107LX_6, NikeAirForce107LX_7, NikeAirForce107LX_8, NikeAirForce107LX_9,]
+        images: [NikeAirForce107LX_1, NikeAirForce107LX_2, NikeAirForce107LX_3, NikeAirForce107LX_4, NikeAirForce107LX_5, NikeAirForce107LX_6, NikeAirForce107LX_7, NikeAirForce107LX_8, NikeAirForce107LX_9,],
+        featured: true,
     },
     {
         id: 3,
-        name: 'Air Jordan 1 Retro High OG Yellow Ochre',
+        name: 'Air Jordan 1 Retro High OG "Yellow Ochre"',
         description: "Men's Shoes",
         price: 179.99,
         sizes: [37, 39, 39.5, 40, 40.5, 41, 42, 42.5, 44, 46],
         sex: 'male',
-        images: [NikeAirJordan1RetroHighOGYellow_1, NikeAirJordan1RetroHighOGYellow_2, NikeAirJordan1RetroHighOGYellow_3, NikeAirJordan1RetroHighOGYellow_4, NikeAirJordan1RetroHighOGYellow_5, NikeAirJordan1RetroHighOGYellow_6, NikeAirJordan1RetroHighOGYellow_7, NikeAirJordan1RetroHighOGYellow_8]
+        images: [NikeAirJordan1RetroHighOGYellow_1, NikeAirJordan1RetroHighOGYellow_2, NikeAirJordan1RetroHighOGYellow_3, NikeAirJordan1RetroHighOGYellow_4, NikeAirJordan1RetroHighOGYellow_5, NikeAirJordan1RetroHighOGYellow_6, NikeAirJordan1RetroHighOGYellow_7, NikeAirJordan1RetroHighOGYellow_8],
+        featured: false,
     },
     {
         id: 4,
@@ -72,7 +87,17 @@ const Products = [
         tag: 'Coming Soon',
         price: 84.99,
         sex: 'male',
-        images: [SBVertebrae_1, SBVertebrae_2, SBVertebrae_3, SBVertebrae_4, SBVertebrae_5, SBVertebrae_6, SBVertebrae_7, SBVertebrae_8]
+        images: [SBVertebrae_1, SBVertebrae_2, SBVertebrae_3, SBVertebrae_4, SBVertebrae_5, SBVertebrae_6, SBVertebrae_7, SBVertebrae_8],
+        featured: true,
+    },
+    {
+        id: 5,
+        name: 'Ja 1 Fly',
+        description: "Basketball Shoes",
+        price: 119.99,
+        sex: 'unisex',
+        images: [Ja1Fly_1, Ja1Fly_2, Ja1Fly_3, Ja1Fly_4, Ja1Fly_5, Ja1Fly_6, Ja1Fly_7, Ja1Fly_8, Ja1Fly_9, Ja1Fly_10, Ja1Fly_11],
+        featured: true,
     },
 ]
 

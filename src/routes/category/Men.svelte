@@ -15,22 +15,17 @@
         {/each}
     </div>
 </div>
-Men's category
-
 
 <style lang="scss">
     .categoryPage {
         display: flex;
         justify-content: center;
-        border: 0.1rem solid red;
 
         &__content {
             display: flex;
             flex-wrap: wrap;
             gap: 3rem 1.5rem;
-            // width: 100%;
             max-width: var(--max-width);
-            border: 0.1rem solid blue;
         }
     }
 </style>
