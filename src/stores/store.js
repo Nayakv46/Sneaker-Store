@@ -39,7 +39,7 @@ export function removeAllProduct(item) {
     ProductsStore.update((currentStore) => {
         // return the filtered store without item of chosen id
         return currentStore.filter((product) => {
-            return product.id == item.id && product.size !== item.size;
+            return product.id !== item.id || (product.id === item.id && product.size !== item.size);
         });
     })
 }
@@ -60,7 +60,7 @@ export function removeSingleProduct(item) {
 
             // if there are no more chosen items, remove it from the store
             if (result.numberOfItems < 1){
-                return copiedStore.filter((product) => product.id === item.id && product.size !== item.size);
+                return copiedStore.filter((product) => product.id !== item.id || (product.id === item.id && product.size !== item.size));
             } else {
                 return copiedStore;
             }
@@ -78,7 +78,7 @@ export function updateProductCount(item, amount) {
         // anti funny customer
         if (amount < 1) {
             // result.numberOfItems = 0;
-            return currentStore.filter((product) => product.id === item.id && product.size !== item.size )
+            return currentStore.filter((product) => product.id !== item.id || (product.id === item.id && product.size !== item.size) )
         } else if (amount > 0) {
             // set the input value to store
             result.numberOfItems = amount;

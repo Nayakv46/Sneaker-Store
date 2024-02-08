@@ -43,15 +43,20 @@
             </p>
 
             <form on:submit|preventDefault class="productPage__sizes">
-                <p>Choose your size</p>
 
-                <div class="sizePicker">
-                    {#each product.sizes as size, index (index)}
-                        <SizePicker size={size} on:set={handleSet} id={index} name={product.name} />
-                    {/each}
-                </div>
+                {#if product.sizes}
+                    <p>Choose your size</p>
 
-                <AddToCartButton item={product} size={chosenSize} />
+                    <div class="sizePicker">
+                        {#each product.sizes as size, index (index)}
+                            <SizePicker size={size} on:set={handleSet} id={index} name={product.name} />
+                        {/each}
+                    </div>
+
+                    <AddToCartButton item={product} size={chosenSize} />
+                {:else}
+                    <div class="comingSoon">Coming Soon</div>
+                {/if}
             </form>
         </div>
     </div>
@@ -109,6 +114,14 @@
             flex-direction: row;
             flex-wrap: wrap;
             gap: 1rem;
+        }
+
+        .comingSoon {
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            color: var(--black700);
+            background-color: var(--gray200);
         }
     }
 </style>

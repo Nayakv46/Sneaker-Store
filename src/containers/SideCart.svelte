@@ -40,7 +40,7 @@
             </p>
 
             <div class="sideCart__items">
-                {#each $ProductsStore as product (product.id+product.size)}
+                {#each $ProductsStore as product (product.name+product.size)}
                     <div out:fly={{ x: '100%', duration: 500,  }} animate:flip={{  duration: 500 }}>
                         <SideCartItem {product} />
                     </div>
