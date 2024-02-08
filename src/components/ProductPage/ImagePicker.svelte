@@ -1,4 +1,8 @@
 <script>
+    import Icon from 'svelte-icons-pack/Icon.svelte';
+    import FaChevronLeft from 'svelte-icons-pack/fa/FaSolidChevronLeft';
+    import FaChevronRight from 'svelte-icons-pack/fa/FaSolidChevronRight';
+
     export let item;
 
     let chosenImage = 0;
@@ -46,7 +50,7 @@
                 type="button"
                 on:click={handlePrevImage}
             >
-                ()
+                <Icon src={FaChevronLeft} />
             </button>
 
             <button
@@ -54,7 +58,7 @@
                 type="button"
                 on:click={handleNextImage}
             >
-                >
+                <Icon src={FaChevronRight} />
             </button>
         </div>
     </div>
@@ -146,16 +150,45 @@
             position: absolute;
             bottom: 2rem;
             right: 2rem;
+            display: flex;
+            gap: 1rem;
+
         }
 
         &__nextImage,
         &__prevImage {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 3rem;
             height: 3rem;
-            // padding: 1rem;
             border-radius: 50%;
-            border: 0.2rem solid var(--black600);
-            background-color: var(--white600);
+            border: none;
+            background-color: var(--white700);
+            transition: var(--transition);
+            cursor: pointer;
+
+            & > :global(svg) {
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%, 0);
+                font-size: 1.4rem;
+
+            }
+
+            &:hover {
+                background-color: var(--gray200);
+            }
+        }
+
+        &__nextImage > :global(svg) {
+            margin-left: 0.1rem;
+        }
+
+        &__prevImage > :global(svg) {
+            margin-left: -0.1rem;
         }
     }
 </style>
