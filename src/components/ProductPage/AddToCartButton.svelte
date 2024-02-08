@@ -1,9 +1,28 @@
 <script>
     import { addProduct } from "../../stores/store";
+    import MessagePopUp from "./MessagePopUp.svelte";
 
     export let item;
     export let size;
+
+    let popUpType = '';
+
+    $: popUpType;
+
+    const handlePopUp = (type) => {
+
+        popUpType = type;
+
+        let timeoutId = setTimeout(() => {
+            popUpType = '';
+            clearTimeout(timeoutId);
+        }, 5000);
+    }
 </script>
+
+{#if popUpType !== ''}
+    <MessagePopUp type={popUpType} />
+{/if}
 
 <button
     class="productPage__addToCartButton"
@@ -11,8 +30,9 @@
     on:click={() => {
         if (size){
             addProduct(item, size);
+            handlePopUp('confirm');
         } else {
-            alert('Select your size!');
+            handlePopUp('error');
         }
     }}
 >

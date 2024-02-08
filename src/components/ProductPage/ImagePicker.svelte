@@ -37,7 +37,7 @@
 
         &__list{
             position: relative;
-            flex: 1;
+            // flex: 1;
             display: flex;
             flex-direction: column;
             gap: 1rem;
@@ -95,7 +95,7 @@
         }
 
         &__showcase {
-            flex: 9;
+            flex: 1;
             display: flex;
         }
 
