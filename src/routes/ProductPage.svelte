@@ -74,7 +74,6 @@
             flex-direction: row;
             justify-content: center;
             gap: 2rem;
-            min-height: 100dvh;
             max-width: var(--max-width);
         }
 

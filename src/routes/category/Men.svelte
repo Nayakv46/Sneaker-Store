@@ -2,7 +2,7 @@
     import Products from "../../assets/Products";
     import ProductTile from "../../components/Category/ProductTile.svelte";
 
-    let filteredProducts = Products.filter((item) => item.sex === 'male' || 'unisex');
+    let filteredProducts = Products.filter((item) => item.sex === 'male' || item.sex === 'unisex');
 
 </script>
 

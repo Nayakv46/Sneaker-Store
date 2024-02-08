@@ -6,6 +6,21 @@
     const handleImageChange = (id) => {
         chosenImage = id;
     }
+    const handleNextImage = () => {
+        if(chosenImage < item.images.length - 1){
+            chosenImage++;
+        } else {
+            chosenImage = 0;
+        }
+    }
+
+    const handlePrevImage = () => {
+        if(chosenImage < 1) {
+            chosenImage = item.images.length - 1;
+        } else {
+            chosenImage--;
+        }
+    }
 
 </script>
 
@@ -24,6 +39,24 @@
 
     <div class="imagePicker__showcase">
         <img src={item.images[chosenImage]} alt={item.name} class="imagePicker__bigImage" />
+
+        <div class="imagePicker__controls">
+            <button
+                class="imagePicker__prevImage"
+                type="button"
+                on:click={handlePrevImage}
+            >
+                ()
+            </button>
+
+            <button
+                class="imagePicker__nextImage"
+                type="button"
+                on:click={handleNextImage}
+            >
+                >
+            </button>
+        </div>
     </div>
 </div>
 
@@ -67,7 +100,7 @@
 
                 &:hover {
                     & .imagePicker__list-overlay {
-                        background-color: rgba(0,0,0,0.3);
+                        background-color: rgba(0,0,0,0.08);
                     }
                 }
             }
@@ -95,6 +128,7 @@
         }
 
         &__showcase {
+            position: relative;
             flex: 1;
             display: flex;
         }
@@ -105,6 +139,23 @@
             // width: auto;
             // height: auto;
             object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        &__controls {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+        }
+
+        &__nextImage,
+        &__prevImage {
+            width: 3rem;
+            height: 3rem;
+            // padding: 1rem;
+            border-radius: 50%;
+            border: 0.2rem solid var(--black600);
+            background-color: var(--white600);
         }
     }
 </style>
