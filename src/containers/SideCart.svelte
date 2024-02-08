@@ -2,7 +2,10 @@
     export let toggleCart;
     export let showCart;
 
+    import { fly } from "svelte/transition";
     import { fade } from "svelte/transition";
+
+    import { flip } from "svelte/animate";
 
     import Icon from "svelte-icons-pack/Icon.svelte";
     import CloseIcon from 'svelte-icons-pack/io/IoClose';
@@ -38,8 +41,9 @@
 
             <div class="sideCart__items">
                 {#each $ProductsStore as product (product.id+product.size)}
-                    <!-- {JSON.stringify(product)} -->
-                    <SideCartItem {product} />
+                    <div out:fly={{ x: '100%', duration: 500,  }} animate:flip={{  duration: 500 }}>
+                        <SideCartItem {product} />
+                    </div>
                 {/each}
             </div>
 
@@ -123,8 +127,6 @@
             flex-direction: column;
             gap: 2rem;
             width: 100%;
-            overflow-x: hidden;
-            overflow-y: auto;
         }
 
         &__header {
@@ -140,6 +142,12 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
         }
 
         &__total{
@@ -178,6 +186,10 @@
             }
         }
 
+    }
+
+    .sideCartItem__container {
+        
     }
 
     @media screen and (max-width: 420px){

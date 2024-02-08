@@ -1,23 +1,24 @@
 <script>
     export let product;
 
-    import { expoOut, expoIn, quintIn, quintOut } from "svelte/easing";
+    import Products from "../assets/Products";
 
-    import { fly } from "svelte/transition";
     import { removeSingleProduct, updateProductCount, addProduct } from "../stores/store";
     import AddMultipleToCart from "./AddMultipleToCart.svelte";
     import AddToCartButton from "./AddToCartButton.svelte";
     import RemoveFromCartButton from "./RemoveFromCartButton.svelte";
     import UpdateProductNumber from "./UpdateProductNumber.svelte";
   import RemoveAllFromCartButton from "./RemoveAllFromCartButton.svelte";
+
     let { id, size, name, description, price } = product;
 
-    let itemsInStore;
+    let item = Products.find((item) => item.id === id)
+    
 </script>
 
-<div class="sideCartItem" out:fly={{ x: '100%', duration: 500,  }}>
+<div class="sideCartItem">
     <div class="sideCartItem__image">
-        image will be here i guess later when i add
+        <img class="sideCartIem__image" src={item.images[0]} alt={item.name} />
     </div>
 
     <div class="sideCartItem__content">
@@ -48,17 +49,25 @@
     </div>
 </div>
 
+
 <style lang="scss">
     .sideCartItem {
         display: flex;
-        gap: 1rem;
-        // padding: 1rem;
         border: 0.2rem solid var(--black600);
         border-radius: 1rem;
-        overflow: hidden;
 
         &__image {
             flex: 1;
+            overflow: hidden;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+
+            & > img {
+                display: flex;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
         }
 
         &__content {
@@ -68,6 +77,8 @@
             justify-content: space-between;
             padding: 1rem;
             background-color: var(--white500);
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
             // border: 0.1rem solid red;
 
             &-top{

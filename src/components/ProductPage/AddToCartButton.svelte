@@ -15,7 +15,7 @@
 
         let timeoutId = setTimeout(() => {
             popUpType = '';
-            clearTimeout(timeoutId);
+            // clearTimeout(timeoutId);
         }, 5000);
     }
 </script>
