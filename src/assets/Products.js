@@ -141,6 +141,13 @@ const Products = [
         id: 1,
         name: 'Nike Downshifter 12',
         description: "Men's Road Running Shoes",
+        descriptionLong: {
+            text: "Take those first steps on your running journey in the Nike Downshifter 12. Made from at least 20% recycled content by weight, it has a supportive fit and stable ride, with a lightweight feel that easily transitions from your workout to hangout. Your trek begins. Lace up and hit the road.",
+            listed: {
+                shown: "Black/Dark Smoke Grey/Pure Graphite/Charcoal",
+                style: "DD9293-001"
+            }
+        },
         tag: "Just In",
         price: 64.99,
         sizes: [38, 38.5, 39, 39.5, 40, 40.5, 41, 41.5, 42, 43, 44],
@@ -152,6 +159,13 @@ const Products = [
         id: 2,
         name: "Nike Air Force 1 '07 LX",
         description: "Men's Shoes",
+        descriptionLong: {
+            text: 'The radiance lives on in the Nike Air Force 1 ’07 LX, the b-ball icon that puts a playful twist on what you know best: stitched overlays, bold colors and the perfect amount of flash to make you shine. Several cheerful details nod to the ubiquitous shopping bags of NYC bodegas, making sure you "have a nice day."',
+            listed: {
+                shown: "White/University Red/Pine Green/White",
+                style: "CU6312-100"
+            }
+        },
         tag: "Best Seller",
         price: 134.99,
         sizes: [38, 40.5, 41, 42, 42.5, 43, 43.5, 45, 46],
@@ -163,6 +177,13 @@ const Products = [
         id: 3,
         name: 'Air Jordan 1 Retro High OG "Yellow Ochre"',
         description: "Men's Shoes",
+        descriptionLong: {
+            text: "A classic, remastered. This AJ1 balances Yellow Ochre and Black against a tumbled Sail leather backdrop for a clean, sophisticated finish. Refined details and retro branding bring it all together: old-meets-new style as smooth as MJ's fadeaway.",
+            listed: {
+                shown: "Yellow Ochre/Sail/Black",
+                style: "DZ5485-701"
+            }
+        },
         price: 179.99,
         sizes: [37, 39, 39.5, 40, 40.5, 41, 42, 42.5, 44, 46],
         sex: 'male',
@@ -173,6 +194,13 @@ const Products = [
         id: 4,
         name: 'Nike SB Vertebrae',
         description: "Men's Shoes",
+        descriptionLong: {
+            text: "The Vertebrae breaks in fast and breaks down slow, creating a consistent fit right out of the box. Color blocking in a Nike heritage palette gives this modern shoe the perfect touch of retro.",
+            listed: {
+                shown: "Black/Anthracite/Black/Summit White",
+                style: "FD4691-001"
+            }
+        },
         tag: 'Coming Soon',
         price: 84.99,
         sex: 'male',
@@ -183,6 +211,13 @@ const Products = [
         id: 5,
         name: 'Ja 1 Fly',
         description: "Basketball Shoes",
+        descriptionLong: {
+            text: "Ja Morant became the superstar he is today by repeatedly sinking jumpers on crooked rims, jumping on tractor tires and dribbling through traffic cones in steamy South Carolina summers. The Ja 1 is a testament to his rise. With Zoom Air, it supports bunny hops and hyper speed without sacrificing comfort, so that you can control your own destiny on the court. This special design pays homage to Ja’s get-up-and-go pace.",
+            listed: {
+                shown: "Black/Coconut Milk/Vivid Sulfur/Light Silver",
+                style: "DR8785-002"
+            }
+        },
         tag: 'Just In',
         price: 119.99,
         sizes: [37, 39, 39.5, 40, 40.5, 41, 42, 42.5, 44, 45, 46],
@@ -194,6 +229,13 @@ const Products = [
         id: 6,
         name: 'Air Jordan 1 Retro High OG "White and Gold"',
         description: "Women's Shoes",
+        descriptionLong: {
+            text: "Put some shine on your shoe game. This AJ1 elevates MJ's first signature model with glossy hits of gold against a clean leather backdrop. Premium materials, modern cushioning and a padded ankle collar refresh the iconic shoe that started it all. Retro Nike Air branding throws it back, and a golden keychain is included to immortalize the legacy.",
+            listed: {
+                shown: "White/Gum Light Brown/Metallic Gold",
+                style: "FD2596-107"
+            }
+        },
         tag: 'Coming Soon',
         price: 179.99,
         sex: 'female',
@@ -204,6 +246,13 @@ const Products = [
         id: 7,
         name: 'Air Jordan 3 "Fear"',
         description: "Men's Shoes",
+        descriptionLong: {
+            text: "Clean and supreme, the AJ3 returns with all of its classic style and grace. Quality leather in the upper—with that luxurious elephant print texture—combines with visible Nike Air in the sole to make a comfortable, everyday icon.",
+            listed: {
+                shown: "Night Stadium/Black/Flat Pewter/Total Orange",
+                style: "CT8532-080"
+            }
+        },
         price: 209.99,
         sizes: [39, 39.5, 40, 40.5, 41, 42, 42.5, 44, 45, 46, 47],
         sex: 'male',
@@ -214,6 +263,13 @@ const Products = [
         id: 8,
         name: 'Air Jordan 1 Element',
         description: "Shoes",
+        descriptionLong: {
+            text: "Shift into casual mode with the Air Jordan 1 Element. Rich with iconic hoops heritage, the wardrobe staple steps up its game with GORE-TEX material and buttery nubuck leather overlays. A reflective Swoosh shines along the sides.",
+            listed: {
+                shown: "Cement Grey/Black/Infrared 23/Dark Charcoal",
+                style: "DB2889-002"
+            }
+        },
         price: 199.99,
         sizes: [38, 38.5, 39, 39.5, 40, 40.5, 41, 42, 42.5, 43, 43.5, 44, 46, 47],
         sex: 'unisex',
@@ -224,6 +280,13 @@ const Products = [
         id: 9,
         name: 'Jordan ADG 4 x Eastside Golf',
         description: "Men's Golf Shoes",
+        descriptionLong: {
+            text: "A request from MJ himself, the Jordan 4 ADG infuses a classic shoe with retro Jordan flavor. Soft full-grain leather shows off the iconic elephant print on the heel. The rubber sole has a traction pattern that pairs the grip you need with the versatility and comfort you want. This collaboration with Eastside Golf celebrates the love of both games.",
+            listed: {
+                shown: "Black/White/Metallic Gold/Malachite",
+                style: "FJ0850-001"
+            }
+        },
         price: 204.99,
         sizes: [38, 39, 40, 40.5, 41, 42, 42.5, 43, 43.5, 44, 46, 47, 48],
         sex: 'male',
@@ -234,6 +297,13 @@ const Products = [
         id: 10,
         name: 'Nike Dunk Low',
         description: "Women's Shoes",
+        descriptionLong: {
+            text: "Created for the hardwood but taken to the streets, the '80s b-ball icon returns with perfectly shined overlays and classic team colors. With its iconic hoops design, the Nike Dunk Low channels '80s vintage back onto the streets while its padded, low-cut collar lets you take your game anywhere—in comfort.",
+            listed: {
+                shown: "White/White/Black",
+                style: "DD1503-101"
+            }
+        },
         tag: 'Best Seller',
         price: 114.99,
         sizes: [36, 36.5, 37, 37.5, 38, 39, 40, 40.5, 41, 42, 42.5, 43, 43.5, 44],
@@ -245,6 +315,13 @@ const Products = [
         id: 11,
         name: 'Nike Pegasus 40',
         description: "Women's Road Running Shoes",
+        descriptionLong: {
+            text: "A springy ride for any run, the Peg’s familiar, just-for-you feel returns to help you accomplish your goals. This version has the same responsiveness and neutral support you love, but with improved comfort in those sensitive areas of your foot, like the arch and toes. Whether you’re logging long marathon miles, squeezing in a speed session before the sun goes down or hopping into a spontaneous group jaunt, it’s still the established road runner you can put your faith in, day after day, run after run.",
+            listed: {
+                shown: "Black/Laser Orange/White/Hyper Violet",
+                style: "DV3854-011"
+            }
+        },
         tag: 'Best Seller',
         price: 129.99,
         sizes: [36, 36.5, 37, 38, 39, 40, 41, 42, 42.5, 44],
@@ -256,6 +333,13 @@ const Products = [
         id: 12,
         name: 'Nike Invincible 3',
         description: "Women's Road Running Shoes",
+        descriptionLong: {
+            text: "With maximum cushioning to support every mile, the Invincible 3 is our highest level of comfort underfoot. Its plush and bouncy ZoomX foam helps you stay stable and fresh. In other words—it's going to feel good all day, no matter what you're doing. And when you pair all this cushioning with easy-to-style colors, you get a shoe you never want to stop wearing.",
+            listed: {
+                shown: "Black/Laser Orange/Coconut Milk/Hyper Violet",
+                style: "DR2660-006"
+            }
+        },
         tag: 'Best Seller',
         price: 179.99,
         sizes: [36, 37, 37.5, 39, 39.5, 40, 40.5, 41],
@@ -267,6 +351,13 @@ const Products = [
         id: 13,
         name: 'Nike MC Trainer 2',
         description: "Women's Workout Shoes",
+        descriptionLong: {
+            text: "The Nike MC Trainer 2 can help you shift from circuit training in the weight room to the field turf for quick-twitch conditioning, seamlessly. It’s a multipurpose power that combines versatility, stability and longevity to help you stay locked in on the physical task at hand. From back squats to sprint repeats, it can help support the rigors of your diverse training regimen without having to make a pit stop to grab more gear for your workout.",
+            listed: {
+                shown: "White/Pink Foam/Dark Team Red/Fierce Pink",
+                style: "DM0824-105"
+            }
+        },
         price: 79.99,
         sizes: [36, 36.5, 37, 38.5, 39, 41, 42, 42.5, 44],
         sex: 'female',

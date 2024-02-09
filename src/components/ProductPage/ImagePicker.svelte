@@ -66,6 +66,8 @@
 
 <style lang="scss">
     .imagePicker {
+        position: sticky;
+        top: 9.8rem;
         display: flex;
         flex-direction: row;
         gap: 1rem;

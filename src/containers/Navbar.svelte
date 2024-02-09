@@ -47,7 +47,6 @@
             <Icon src={RiShoppingCartLine}
                 color="black"
                 size="32"
-                class="navbar__cta-cart"
             />
             <span class="navbar__cta-itemsNo">{itemsNumber}</span>
         </button>
@@ -67,6 +66,7 @@
         padding: 1rem 2rem;
         background-color: var(--white700);
         border-bottom: 0.4rem solid var(--black600);
+        z-index: 100;
 
 
         &__content {
