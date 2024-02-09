@@ -97,6 +97,7 @@
             flex-direction: column;
             justify-content: center;
             gap: 2rem;
+            width: 100%;
             max-width: var(--max-width);
 
             &-main {
