@@ -96,7 +96,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 2rem;
+            gap: 4rem;
             width: 100%;
             max-width: var(--max-width);
 
