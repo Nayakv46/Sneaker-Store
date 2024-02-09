@@ -20,6 +20,7 @@
     .categoryPage {
         display: flex;
         justify-content: center;
+        padding: var(--wrapper-padding);
 
         &__content {
             display: flex;

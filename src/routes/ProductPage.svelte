@@ -91,6 +91,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding: var(--wrapper-padding);
 
         &__content{
             display: flex;

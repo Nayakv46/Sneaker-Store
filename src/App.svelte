@@ -12,6 +12,7 @@
   import Men from "./routes/category/Men.svelte";
   import Women from "./routes/category/Women.svelte";
   import ProductPage from "./routes/ProductPage.svelte";
+  import Footer from "./containers/Footer.svelte";
 </script>
 
 <Navbar />
@@ -26,3 +27,5 @@
     <ProductPage id="{params.id}" />
   </Route>
 </Router>
+
+<Footer />

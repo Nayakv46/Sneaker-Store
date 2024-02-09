@@ -7,7 +7,7 @@
     import Navbar from "../containers/Navbar.svelte";
   </script>
   
-  <Navbar />
+  <!-- <Navbar /> -->
   
   <main class="hero">
   
@@ -32,6 +32,7 @@
       gap: 2rem;
       min-height: 100svh;
       min-height: 100vh;
+      padding: var(--wrapper-padding);
     }
   
     .product {
