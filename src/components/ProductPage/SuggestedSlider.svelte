@@ -12,7 +12,7 @@
 
     // EXPLANATION OF TWO #EACH BLOCKS
     // rendering 5 items starting from randomly selected number
-    // if the list of products end before rendering 5 -> render left number of them from 0
+    // if the list of products ends before rendering 5 -> render the left number of them starting from 0
     const randomInt = (min, max) => {
         const minCeiled = Math.ceil(min);
         const maxFloored = Math.floor(max);
@@ -149,13 +149,6 @@
                 background: var(--gray800);
                 border-radius: 1.2rem;
 
-                &:hover {
-                    background: green;
-                }
-            }
-
-            &::-webkit-scroll-track{
-                // background: red;
             }
 
             &::-webkit-scrollbar {
