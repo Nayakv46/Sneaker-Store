@@ -15,9 +15,9 @@
                 return itemB.price - itemA.price;
             })
         }
-        return filteredProducts = [...filteredProducts];
     }
 
+    $: filteredProducts;
 </script>
 
 <div class="categoryPage">
