@@ -94,4 +94,15 @@
         // height: auto;
         // object-position: 50% 60%;
     // }
+
+    @media screen and (max-width: 650px) {
+        .productTile {
+            width: calc(50% - 1rem);
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .productTile {
+            width: 100%;
+        }
+    }
 </style>

@@ -144,9 +144,16 @@
             gap: 2rem;
             overflow-y: auto;
             overflow-x: hidden;
+            padding-right: 0.6rem;
 
-            &::-webkit-scrollbar{
-                display: none;
+            &::-webkit-scrollbar-thumb{
+                background: var(--gray800);
+                border-radius: 1.2rem;
+
+            }
+
+            &::-webkit-scrollbar {
+                width: 0.6rem;
             }
         }
 

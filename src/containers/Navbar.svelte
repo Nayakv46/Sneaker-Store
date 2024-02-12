@@ -7,9 +7,11 @@
 
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import RiShoppingCartLine from 'svelte-icons-pack/ri/RiFinanceShoppingCartLine';
+    import FaBars from 'svelte-icons-pack/fa/FaSolidBars';
 
     import Logo from '../assets/images/Sneaker-store-logo.png';
     import SideCart from './SideCart.svelte';
+    import MobileMenu from './MobileMenu.svelte';
 
     let showCart = false;
 
@@ -22,6 +24,12 @@
     $: itemsNumber = $ProductsStore.reduce((accumulator, object) => {
         return accumulator + object.numberOfItems;
     }, 0);
+
+    let showMobileMenu = false;
+
+    const toggleMobileMenu = () => {
+        showMobileMenu = !showMobileMenu;
+    }
 
 </script>
 
@@ -43,17 +51,25 @@
             </li>
         </ul>
 
-        <button type="button" on:click={() => toggleCart()} class="navbar__cta">
-            <Icon src={RiShoppingCartLine}
-                color="black"
-                size="32"
-            />
-            <span class="navbar__cta-itemsNo">{itemsNumber}</span>
-        </button>
+        <div class="navbar__buttons">
+
+            <button type="button" on:click={() => toggleCart()} class="navbar__cta">
+                <Icon src={RiShoppingCartLine} />
+                <span class="navbar__cta-itemsNo">{itemsNumber}</span>
+            </button>
+
+            <button type="button" class="navbar__cta navbar__cta--menu"
+                on:click={toggleMobileMenu}
+            >
+                <Icon src={FaBars} />
+            </button>
+        </div>
     </div>
 </nav>
 
 <SideCart toggleCart={toggleCart} {showCart} />
+
+<MobileMenu {toggleMobileMenu} {showMobileMenu} />
 
 <style lang="scss">
     .navbar {
@@ -62,6 +78,7 @@
         top: 0;
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
         padding: 1rem 2rem;
         background-color: var(--white700);
@@ -129,6 +146,11 @@
             }
         }
 
+        &__buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
         &__cta {
             position: relative;
             display: flex;
@@ -138,8 +160,10 @@
             background-color: rgba(0,0,0,0);
             border: none;
             border-radius: 50%;
-            cursor: pointer;
+            font-size: 3.2rem;
+            fill: var(--black600);
             transition: var(--transition);
+            cursor: pointer;
 
             &:hover {
                 background-color: rgba(0,0,0,0.1);
@@ -158,6 +182,22 @@
                 color: var(--white400);
                 font-weight: 500;
                 border-radius: 50%;
+            }
+
+            &--menu {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (max-width: 670px) {
+        .navbar{
+            &__links {
+                display: none;
+            }
+
+            &__cta--menu {
+                display: flex;
             }
         }
     }
