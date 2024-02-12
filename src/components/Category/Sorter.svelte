@@ -53,7 +53,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        
+
         &__button {
             display: flex;
             justify-content: center;

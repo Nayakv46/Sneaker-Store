@@ -8,11 +8,11 @@
     const handleSort = (event) => {
         if (event.detail === 'HL') {
             filteredProducts = filteredProducts.sort((itemA, itemB) => {
-                    return itemA.price - itemB.price;
+                    return itemB.price - itemA.price;
             })
         } else if (event.detail === 'LH') {
             filteredProducts = filteredProducts.sort((itemA, itemB) => {
-                return itemB.price - itemA.price;
+                return itemA.price - itemB.price;
             })
         }
     }
@@ -39,7 +39,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 3rem;
+        gap: 1.5rem;
         padding: var(--wrapper-padding);
 
         &__sort {
