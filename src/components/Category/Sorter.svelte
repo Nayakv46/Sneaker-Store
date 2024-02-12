@@ -7,10 +7,22 @@
         const button = document.querySelector(".sorter");
 
         if(button.classList.contains("show")){
-            button.classList.remove("show");
+            handleHide();
         } else {
             button.classList.add("show");
+
+            document.body.addEventListener('click', handleHide, true);
         }
+    }
+
+    const handleHide = () => {
+        const button = document.querySelector(".sorter");
+
+        if(button.classList.contains("show")){
+            button.classList.remove("show");
+        }
+
+        document.body.removeEventListener('click', handleHide, true);
     }
 
     const handleSort = (value) => {
