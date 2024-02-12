@@ -178,4 +178,14 @@
             }
         }
     }
+
+    @media screen and (max-width: 991px) {
+        .productPage {
+            &__content {
+                &-main {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
 </style>

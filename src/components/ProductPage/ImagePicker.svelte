@@ -103,6 +103,7 @@
                 overflow: hidden;
                 width: 6rem;
                 min-height: 6rem;
+                min-width: 6rem;
 
                 &:hover {
                     & .imagePicker__list-overlay {
@@ -191,6 +192,31 @@
 
         &__prevImage > :global(svg) {
             margin-left: -0.1rem;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .imagePicker {
+            max-height: 60rem;
+            
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .imagePicker {
+            max-height: 50rem;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .imagePicker {
+            max-height: none;
+            flex-direction: column-reverse;
+
+            &__list {
+                flex-direction: row;
+                overflow-x: auto;
+            }
         }
     }
 </style>
