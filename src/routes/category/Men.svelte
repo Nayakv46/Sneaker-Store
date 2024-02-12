@@ -1,17 +1,35 @@
 <script>
     import Products from "../../assets/Products";
     import ProductTile from "../../components/Category/ProductTile.svelte";
+    import Sorter from "../../components/Category/Sorter.svelte";
 
     let filteredProducts = Products.filter((item) => item.sex === 'male' || item.sex === 'unisex');
+
+    const handleSort = (event) => {
+        if (event.detail === 'HL') {
+            filteredProducts = filteredProducts.sort((itemA, itemB) => {
+                    return itemA.price - itemB.price;
+            })
+        } else if (event.detail === 'LH') {
+            filteredProducts = filteredProducts.sort((itemA, itemB) => {
+                return itemB.price - itemA.price;
+            })
+        }
+        return filteredProducts = [...filteredProducts];
+    }
 
 </script>
 
 <div class="categoryPage">
 
+    <div class="categoryPage__sort">
+        <Sorter on:changeSort={handleSort} />
+    </div>
+
     <div class="categoryPage__content">
 
-        {#each filteredProducts as item}
-        <ProductTile {item} />
+        {#each filteredProducts as item (item.id)}
+            <ProductTile {item} />
         {/each}
     </div>
 </div>
@@ -19,8 +37,17 @@
 <style lang="scss">
     .categoryPage {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
         padding: var(--wrapper-padding);
+
+        &__sort {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            max-width: var(--max-width);
+        }
 
         &__content {
             display: flex;
