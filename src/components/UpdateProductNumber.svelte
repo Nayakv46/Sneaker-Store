@@ -10,8 +10,6 @@
 
 </script>
 
-<!-- {JSON.stringify(item)} -->
-
 {#if itemInCart !== undefined}
 
     <input type="number"

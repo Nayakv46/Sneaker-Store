@@ -65,8 +65,8 @@
             & > img {
                 display: flex;
                 max-width: 100%;
-                height: auto;
-                object-fit: cover;
+                height: 100%;
+                // object-fit: cover;
             }
         }
 

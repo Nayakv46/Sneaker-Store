@@ -13,6 +13,7 @@
   import Women from "./routes/category/Women.svelte";
   import ProductPage from "./routes/ProductPage.svelte";
   import Footer from "./containers/Footer.svelte";
+  import CheckoutPage from "./routes/CheckoutPage.svelte";
 </script>
 
 <Navbar />
@@ -26,6 +27,8 @@
   <Route path="/product/:id" let:params>
     <ProductPage id="{params.id}" />
   </Route>
+
+  <Route path="/checkout" component={CheckoutPage} />
 </Router>
 
 <Footer />

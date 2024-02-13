@@ -54,9 +54,9 @@
                     <p class="sideCart__total-paragraph">${(total).toFixed(2)}</p>
                 </div>
 
-                <button type="button" class="sideCart__total-button">
+                <a href="/checkout" class="sideCart__total-button">
                     Go to checkout
-                </button>
+                </a>
             </div>
         </div>
     {/if}
@@ -176,7 +176,7 @@
             }
 
             &-button {
-                height: max-content;
+                // height: max-content;
                 padding: 1.4rem 2rem;
                 border: none;
                 border-radius: 3.6rem;
@@ -184,6 +184,8 @@
                 color: var(--white600);
                 font-size: 1.5rem;
                 font-weight: 600;
+                text-decoration: none;
+                line-height: normal;
                 transition: var(--transition);
                 cursor: pointer;
 
