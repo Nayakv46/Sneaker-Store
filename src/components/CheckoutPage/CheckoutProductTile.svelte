@@ -1,6 +1,8 @@
 <script>
     import { onMount } from "svelte";
     import Products from "../../assets/Products";
+  import RemoveFromBag from "./RemoveFromBag.svelte";
+  import UpdateInBag from "./UpdateInBag.svelte";
 
     export let item
 
@@ -22,7 +24,7 @@
 
             <div class="checkoutTile__header">
                 <p>{item.name}</p>
-                <p>${item.price*item.numberOfItems}</p>
+                <p>${(item.price*item.numberOfItems).toFixed(2)}</p>
             </div>
 
             <span>{productInfo.description}</span>
@@ -32,12 +34,12 @@
             <div class="checkoutTile__row">
                 <span>Size {item.size}</span>
 
-                <span>Quantity {item.numberOfItems}</span>
+                <span>Quantity <UpdateInBag {item} /></span>
             </div>
         </div>
 
         <div class="checkoutTile__controls">
-            <p>Remove</p>
+            <RemoveFromBag {item} />
         </div>
     </div>
 </div>
@@ -48,8 +50,8 @@
         flex: 1;
         display: flex;
         flex-direction: row;
-        gap: 2rem;
-        border: 0.1rem solid red;
+        gap: 1rem;
+        // border: 0.1rem solid red;
 
         &__image {
             max-width: 100%;
@@ -61,6 +63,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            padding: 1rem;
         }
 
         &__info {
@@ -72,10 +75,12 @@
         &__header {
             display: flex;
             justify-content: space-between;
+            gap: 2rem;
         }
 
         &__row {
             display: flex;
+            align-items: center;
             gap: 2rem;
         }
     }
