@@ -3,26 +3,40 @@
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import FaChevronUp from 'svelte-icons-pack/fa/FaSolidChevronUp';
 
-    const handleSlide = () => {
-        const button = document.querySelector(".sorter");
+    // an attepmt of a function and event listener to  close the sorting options when clicked anywhere on page, but something always seemed off
+    // const handleSlide = () => {
+    //     const button = document.querySelector(".sorter");
+    //     console.log('handleSlide()')
 
-        if(button.classList.contains("show")){
-            handleHide();
+    //     if(button.classList.contains("show")){
+    //         handleHide();
+    //     } else {
+    //         button.classList.add("show");
+
+    //         document.body.addEventListener('click', handleHide, true);
+    //     }
+    // }
+
+    // const handleHide = () => {
+    //     const button = document.querySelector(".sorter");
+
+    //     console.log('handleHide()')
+    //     if(button.classList.contains("show")){
+    //         button.classList.remove("show");
+    //         handleHide();
+    //     }
+
+    //     document.body.removeEventListener('click', handleHide, true);
+    // }
+
+    const ezClick = () => {
+        const DOMelement = document.querySelector('.sorter');
+
+        if(DOMelement.classList.contains('show')){
+            DOMelement.classList.remove('show');
         } else {
-            button.classList.add("show");
-
-            document.body.addEventListener('click', handleHide, true);
+            DOMelement.classList.add('show');
         }
-    }
-
-    const handleHide = () => {
-        const button = document.querySelector(".sorter");
-
-        if(button.classList.contains("show")){
-            button.classList.remove("show");
-        }
-
-        document.body.removeEventListener('click', handleHide, true);
     }
 
     const handleSort = (value) => {
@@ -33,16 +47,22 @@
 </script>
 
 <div class="sorter">
-    <button class="sorter__button" type="button" on:click={handleSlide}>
+    <button class="sorter__button" type="button" on:click={ezClick}>
         Sort By <Icon src={FaChevronUp} />
     </button>
 
     <div class="sorter__options">
         <button class="sorter__option" type="button"
-            on:click={() => handleSort('HL')}
+            on:click={() => {
+                handleSort('HL');
+                ezClick();
+            }}
         >Price: High-Low</button>
         <button class="sorter__option" type="button"
-            on:click={() => handleSort('LH')}
+            on:click={() => {
+                handleSort('LH');
+                ezClick();
+            }}
         >Price: Low-High</button>
     </div>
 </div>
