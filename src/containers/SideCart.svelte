@@ -47,7 +47,7 @@
         <div class="sideCart__content">
 
             <p class="sideCart__header">
-                Shopping Cart ({itemsNumber})
+                Shopping Bag ({itemsNumber})
             </p>
 
             <div class="sideCart__items">

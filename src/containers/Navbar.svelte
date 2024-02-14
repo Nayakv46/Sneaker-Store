@@ -7,6 +7,7 @@
 
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import RiShoppingCartLine from 'svelte-icons-pack/ri/RiFinanceShoppingCartLine';
+    import HiShoppingBag from 'svelte-icons-pack/hi/HiOutlineShoppingBag';
     import FaBars from 'svelte-icons-pack/fa/FaSolidBars';
 
     import Logo from '../assets/images/Sneaker-store-logo.png';
@@ -54,7 +55,7 @@
         <div class="navbar__buttons">
 
             <button type="button" on:click={() => toggleCart()} class="navbar__cta">
-                <Icon src={RiShoppingCartLine} />
+                <Icon src={HiShoppingBag} />
                 <span class="navbar__cta-itemsNo">{itemsNumber}</span>
             </button>
 
@@ -171,8 +172,8 @@
 
             &-itemsNo {
                 position: absolute;
-                top: 0.2rem;
-                right: 0.4rem;
+                top: 0.4rem;
+                right: 0.2rem;
                 display: flex;
                 justify-content: center;
                 align-items: center;
