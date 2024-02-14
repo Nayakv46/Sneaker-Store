@@ -56,7 +56,9 @@
 
             <button type="button" on:click={() => toggleCart()} class="navbar__cta">
                 <Icon src={HiShoppingBag} />
-                <span class="navbar__cta-itemsNo">{itemsNumber}</span>
+                {#if itemsNumber > 0}
+                    <span class="navbar__cta-itemsNo">{itemsNumber}</span>
+                {/if}
             </button>
 
             <button type="button" class="navbar__cta navbar__cta--menu"
