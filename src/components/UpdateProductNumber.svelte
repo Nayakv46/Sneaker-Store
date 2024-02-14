@@ -30,7 +30,7 @@
         height: 2.5rem;
         font-size: 1.6rem;
         text-align: center;
-        background: var(--white500);
+        background: var(--white600);
         border: none;
         outline: none;
         border-top: 0.2rem solid var(--black500);

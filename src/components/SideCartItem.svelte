@@ -55,6 +55,7 @@
         display: flex;
         border: 0.2rem solid var(--black600);
         border-radius: 1rem;
+        background-color: var(--white600);
 
         &__image {
             flex: 1;
@@ -66,7 +67,6 @@
                 display: flex;
                 max-width: 100%;
                 height: 100%;
-                // object-fit: cover;
             }
         }
 
@@ -76,16 +76,12 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 1rem;
-            background-color: var(--white500);
             border-top-right-radius: 1rem;
             border-bottom-right-radius: 1rem;
-            // border: 0.1rem solid red;
 
             &-top{
                 display: flex;
                 justify-content: space-between;
-                // align-items: flex-start;
-                // border: 0.1rem solid red;
             }
 
             &-name {
@@ -97,7 +93,6 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                // border: 0.1rem solid red;
             }
 
             &-controls {
