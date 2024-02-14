@@ -6,7 +6,7 @@
     import AddToCartButton from "../components/ProductPage/AddToCartButton.svelte";
     import ImagePicker from "../components/ProductPage/ImagePicker.svelte";
     import SizePicker from "../components/ProductPage/SizePicker.svelte";
-  import SuggestedSlider from "../components/ProductPage/SuggestedSlider.svelte";
+    import SuggestedSlider from "../components/ProductPage/SuggestedSlider.svelte";
 
     const product = Products.find((product) => {
         return product.id === Number(id);

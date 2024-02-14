@@ -1,18 +1,11 @@
 <script>
-    import { onMount } from "svelte";
     import Products from "../../assets/Products";
-  import RemoveFromBag from "./RemoveFromBag.svelte";
-  import UpdateInBag from "./UpdateInBag.svelte";
+    import RemoveFromBag from "./RemoveFromBag.svelte";
+    import UpdateInBag from "./UpdateInBag.svelte";
 
     export let item
 
     let productInfo = Products.find((product) => product.id === item.id )
-
-
-    onMount(() => {
-        console.log(productInfo)
-    })
-
 
 </script>
 
@@ -27,9 +20,9 @@
                 <p>${(item.price*item.numberOfItems).toFixed(2)}</p>
             </div>
 
-            <span>{productInfo.description}</span>
+            <span class="checkoutTile__description">{productInfo.description}</span>
 
-            <span>{productInfo.descriptionLong.listed.shown}</span>
+            <span class="checkoutTile__color">{productInfo.descriptionLong.listed.shown}</span>
 
             <div class="checkoutTile__row">
                 <span>Size {item.size}</span>
@@ -62,6 +55,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 2rem;
             padding: 1rem;
         }
 
@@ -74,13 +68,41 @@
         &__header {
             display: flex;
             justify-content: space-between;
-            gap: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem 2rem;
         }
 
         &__row {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            flex-wrap: wrap;
+            gap: 0.5rem 2rem;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .checkoutTile {
+            &__header {
+                flex-wrap: wrap;
+                gap: 1rem 2rem;
+            }
+
+            &__row {
+                flex-wrap: wrap;
+                gap: 0.5rem 2rem;
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .checkoutTile {
+            flex-direction: column;
+
+            &__image {
+                max-height: none;
+                height: auto;
+            }
         }
     }
 </style>
