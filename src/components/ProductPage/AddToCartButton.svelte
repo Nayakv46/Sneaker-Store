@@ -55,7 +55,7 @@
         cursor: pointer;
 
         &:hover {
-            background: var(--gray700);
+            background: var(--gray800);
         }
     }
 </style>

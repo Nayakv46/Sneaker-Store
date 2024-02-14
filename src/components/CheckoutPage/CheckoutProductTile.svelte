@@ -51,7 +51,6 @@
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        // border: 0.1rem solid red;
 
         &__image {
             max-width: 100%;

@@ -10,8 +10,10 @@
     import Icon from "svelte-icons-pack/Icon.svelte";
     import CloseIcon from 'svelte-icons-pack/io/IoClose';
 
+    import emptyBag from '../assets/images/empty_shopping_bag.png';
+
     import { ProductsStore } from "../stores/store";
-  import SideCartItem from "../components/SideCartItem.svelte";
+    import SideCartItem from "../components/SideCartItem.svelte";
 
     let itemsNumber;
     $: itemsNumber = $ProductsStore.reduce((accumulator, object) => {
@@ -31,8 +33,17 @@
     </button>
 
     {#if itemsNumber < 1}
-        Cart is empty
+
+    <div class="sideCart__empty">
+        <p class="sideCart__header">Your Shopping Bag is Empty</p>
+
+        <div class="sideCart__empty-spreader">
+            <img class="sideCart__empty-image" src={emptyBag} alt="empty shopping bag" />
+        </div>
+    </div>
+
     {:else}
+
         <div class="sideCart__content">
 
             <p class="sideCart__header">
@@ -132,7 +143,7 @@
         &__header {
             display: flex;
             align-items: center;
-            height: 4rem;
+            min-height: 4rem;
             font-size: 2rem;
             font-weight: 600;
         }
@@ -181,7 +192,7 @@
                 border: none;
                 border-radius: 3.6rem;
                 background: var(--black600);
-                color: var(--white600);
+                color: var(--white700);
                 font-size: 1.5rem;
                 font-weight: 600;
                 text-decoration: none;
@@ -197,14 +208,36 @@
 
     }
 
-    .sideCartItem__container {
-        
-    }
-
     @media screen and (max-width: 420px){
         .sideCart {
             width: 100%;
             border-left: 0 solid var(--black600);
         }
     }
+
+    .sideCart {
+        &__empty {
+            display: flex;
+            flex-direction: column;
+            gap: 10rem;
+            width: 100%;
+
+            & > .sideCart__header {
+                max-width: 38rem;
+                padding-right: 3.5rem;
+            }
+
+            &-spreader {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            &-image {
+                max-width: 150%;
+            }
+        }
+    }
+
 </style>

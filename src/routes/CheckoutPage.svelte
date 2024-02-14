@@ -1,5 +1,6 @@
 <script>
     import CheckoutProductTile from '../components/CheckoutPage/CheckoutProductTile.svelte';
+    import emptyBag from '../assets/images/empty_shopping_bag.png';
     import { ProductsStore } from "../stores/store";
     import { fly } from 'svelte/transition';
     import { flip } from 'svelte/animate';
@@ -21,6 +22,9 @@
 
 <div class="checkoutPage">
     <div class="checkoutPage__content">
+
+        {#if itemsNumber > 0}
+
         <h4>
             Your Shopping Bag ({itemsNumber})
         </h4>
@@ -34,7 +38,7 @@
                 </div>
                 {/each}
             </div>
-            
+
             <div class="checkoutPage__summary">
                 <h5>Summary</h5>
 
@@ -82,6 +86,18 @@
                 </button>
             </div>
         </div>
+
+        {:else}
+
+        <div class="checkoutPage__empty">
+            <h4>Your Shopping Bag is Empty</h4>
+
+            <a href="/" class="checkoutPage__continue" >Continue Shopping</a>
+
+            <img class="checkoutPage__empty-image" src={emptyBag} alt="empty shopping bag" />
+        </div>
+
+        {/if}
 
     </div>
 </div>
@@ -184,6 +200,36 @@
 
             &__summary {
                 flex: none;
+            }
+        }
+    }
+
+    .checkoutPage {
+        &__empty {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+            width: 100%;
+
+            &-image {
+                max-width: 100%;
+                max-height: 50rem;
+            }
+        }
+
+        &__continue {
+            display: flex;
+            justify-content: center;
+            padding: 1.4rem 3rem;
+            border-radius: 2.8rem;
+            color: var(--white700);
+            text-decoration: none;
+            background-color: var(--black600);
+            transition: var(--transition);
+
+            &:hover {
+                background-color: var(--gray800);
             }
         }
     }
