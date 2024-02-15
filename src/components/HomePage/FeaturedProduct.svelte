@@ -4,7 +4,7 @@
     import { quintInOut } from "svelte/easing";
     import { onMount } from "svelte";
 
-    let shownIndex = 0;
+    let shownIndex = 3;
 
     // onMount(() => {
     //   timeoutId;
@@ -43,6 +43,7 @@
     <div class="featured__info"
         in:fade={{ duration: 1000, delay: 1000, easing: quintInOut, }}
         out:fade={{ duration: 1000, easing: quintInOut, }}
+        style="{item.descriptionBackground} {item.descriptionColor}"
     >
 
         <a href="/product/{item.id}"
@@ -159,7 +160,7 @@
         // background: linear-gradient(to right, #1D267140, #C3376440); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         // background: #ef32d9;  /* fallback for old browsers */
         // background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #89fffd40, #ef32d940); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        // background: linear-gradient(to right, #89fffd40, #ef32d940); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 

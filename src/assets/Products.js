@@ -136,6 +136,15 @@ import MCTrainer2_7 from '../assets/productImages/NikeMCTrainer2/MCTrainer2_7.pn
 import MCTrainer2_8 from '../assets/productImages/NikeMCTrainer2/MCTrainer2_8.png';
 import MCTrainer2_9 from '../assets/productImages/NikeMCTrainer2/MCTrainer2_9.png';
 
+import AirJordan1LowSE_1 from '../assets/productImages/AirJordan1LowSE/AirJordan1LowSE_1.png';
+import AirJordan1LowSE_2 from '../assets/productImages/AirJordan1LowSE/AirJordan1LowSE_2.png';
+import AirJordan1LowSE_3 from '../assets/productImages/AirJordan1LowSE/AirJordan1LowSE_3.png';
+import AirJordan1LowSE_4 from '../assets/productImages/AirJordan1LowSE/AirJordan1LowSE_4.png';
+import AirJordan1LowSE_5 from '../assets/productImages/AirJordan1LowSE/AirJordan1LowSE_5.png';
+import AirJordan1LowSE_6 from '../assets/productImages/AirJordan1LowSE/AirJordan1LowSE_6.png';
+import AirJordan1LowSE_7 from '../assets/productImages/AirJordan1LowSE/AirJordan1LowSE_7.jpg';
+import AirJordan1LowSE_8 from '../assets/productImages/AirJordan1LowSE/AirJordan1LowSE_8.png';
+
 const Products = [
     {
         id: 1,
@@ -362,6 +371,23 @@ const Products = [
         sizes: [36, 36.5, 37, 38.5, 39, 41, 42, 42.5, 44],
         sex: 'female',
         images: [MCTrainer2_1, MCTrainer2_2, MCTrainer2_3, MCTrainer2_4, MCTrainer2_5, MCTrainer2_6, MCTrainer2_7, MCTrainer2_8, MCTrainer2_9],
+        featured: true,
+    },
+    {
+        id: 14,
+        name: 'Air Jordan 1 Low SE',
+        description: "Men's Shoes",
+        descriptionLong: {
+            text: "Fresh look, familiar feel. Every time the AJ1 gets a remake, you get the classic sneaker in new colors and textures. Premium materials and accents give modern expression to an all-time favorite.",
+            listed: {
+                shown: "Off Noir/White/Black/Black",
+                style: "FB9907-001"
+            }
+        },
+        price: 124.99,
+        sizes: [37, 38, 38.5, 39, 40, 40.5, 41, 42, 42.5, 44],
+        sex: 'unisex',
+        images: [AirJordan1LowSE_1, AirJordan1LowSE_2, AirJordan1LowSE_3, AirJordan1LowSE_4, AirJordan1LowSE_5, AirJordan1LowSE_6, AirJordan1LowSE_7, AirJordan1LowSE_8],
         featured: true,
     },
 ]
