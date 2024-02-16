@@ -1,5 +1,6 @@
 <script>
     import Products from "../assets/Products";
+  import CategorySlider from "../components/HomePage/CategorySlider.svelte";
     import FeaturedProducts from "../components/HomePage/FeaturedProducts.svelte";
   import SuggestedSlider from "../components/ProductPage/SuggestedSlider.svelte";
 
@@ -13,10 +14,9 @@
 
   <div class="hero__content">
     <FeaturedProducts />
-    
+    <CategorySlider />
     <SuggestedSlider sex="male" />
   </div>
-
 
 </main>
 
@@ -27,28 +27,16 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    // min-height: 100svh;
-    // min-height: 100vh;
     padding: var(--wrapper-padding);
 
     &__content {
-      flex: 1;
-      // width: 100%;
       display: flex;
       flex-direction: column;
       gap: 4rem;
       max-width: var(--max-width);
+      width: 100%;
     }
 
   }
 
-  .product {
-
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      border: 0.1rem solid var(--blue400);
-    }
-  }
 </style>

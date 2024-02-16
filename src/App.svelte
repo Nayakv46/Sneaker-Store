@@ -14,15 +14,31 @@
   import ProductPage from "./routes/ProductPage.svelte";
   import Footer from "./containers/Footer.svelte";
   import CheckoutPage from "./routes/CheckoutPage.svelte";
+  import Basketball from "./routes/category/Basketball.svelte";
+  import Running from "./routes/category/Running.svelte";
+  import Style from "./routes/category/Style.svelte";
+  import Training from "./routes/category/Training.svelte";
+  import Golf from "./routes/category/Golf.svelte";
+  import Tennis from "./routes/category/Tennis.svelte";
+  import Skating from "./routes/category/Skating.svelte";
 </script>
 
 <Navbar />
 
 <Router>
   <Route path="/" component={Index} />
-  <Route path="/featured" component={Featured} />
-  <Route path="/men" component={Men} />
-  <Route path="/women" component={Women} />
+
+  <Route path="/category/featured" component={Featured} />
+  <Route path="/category/men" component={Men} />
+  <Route path="/category/women" component={Women} />
+  <Route path="/category/basketball" component={Basketball} />
+  <Route path="/category/running" component={Running} />
+  <Route path="/category/style" component={Style} />
+  <Route path="/category/training" component={Training} />
+  <Route path="/category/golf" component={Golf} />
+  <Route path="/category/tennis" component={Tennis} />
+  <Route path="/category/skating" component={Skating} />
+
 
   <Route path="/product/:id" let:params>
     <ProductPage id="{params.id}" />

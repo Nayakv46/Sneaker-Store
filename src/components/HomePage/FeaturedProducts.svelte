@@ -122,7 +122,7 @@
       // border: $border solid rgba(0,0,0,0.05);
       border-radius: var(--r);
       background-size: cover;
-    //   background-position: 50% 40%;
+      // background-position: 50% 40%;
       // background-origin: border-box;
       // background-clip: padding-box;
 
@@ -297,6 +297,9 @@
 
   @media screen and (max-width: 550px) {
     .featured {
+        &__wrapper {
+            aspect-ratio: 10/6;
+        }
         &__image {
             bottom: 4rem;
             right: 4rem;
@@ -316,15 +319,17 @@
 
   @media screen and (max-width: 400px) {
     .featured{
+
+        
         &__info {
             top: 1rem;
             left: 1rem;
         }
 
-        &__image {
-            bottom: 2.5rem;
-            right: 2.5rem;
-        }
+        // &__image {
+            // bottom: 2.5rem;
+            // right: 2.5rem;
+        // }
 
         &__navigation {
             bottom: 1rem;

@@ -42,13 +42,13 @@
 
         <ul class="navbar__links">
             <li>
-                <a href="/featured" class="navbar__links-link">Featured</a>
+                <a href="/category/featured" class="navbar__links-link">Featured</a>
             </li>
             <li>
-                <a href="/men" class="navbar__links-link">Men</a>
+                <a href="/category/men" class="navbar__links-link">Men</a>
             </li>
             <li>
-                <a href="/women" class="navbar__links-link">Women</a>
+                <a href="/category/women" class="navbar__links-link">Women</a>
             </li>
         </ul>
 

@@ -18,13 +18,13 @@
 
     <ul class="mobileNavbar__links">
         <li>
-            <a href="/featured" class="mobileNavbar__links-link">Featured</a>
+            <a href="/category/featured" class="mobileNavbar__links-link">Featured</a>
         </li>
         <li>
-            <a href="/men" class="mobileNavbar__links-link">Men</a>
+            <a href="/category/men" class="mobileNavbar__links-link">Men</a>
         </li>
         <li>
-            <a href="/women" class="mobileNavbar__links-link">Women</a>
+            <a href="/category/women" class="mobileNavbar__links-link">Women</a>
         </li>
     </ul>
 </div>
