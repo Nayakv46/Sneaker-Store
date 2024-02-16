@@ -13,7 +13,7 @@
     import emptyBag from '../assets/images/empty_shopping_bag.png';
 
     import { ProductsStore } from "../stores/store";
-    import SideCartItem from "../components/SideCartItem.svelte";
+    import SideCartItem from "../components/SideCart/SideCartItem.svelte";
 
     let itemsNumber;
     $: itemsNumber = $ProductsStore.reduce((accumulator, object) => {

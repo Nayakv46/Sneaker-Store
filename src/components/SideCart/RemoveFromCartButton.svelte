@@ -1,21 +1,20 @@
 <script>
-    import { addProduct } from "../stores/store";
+    import { removeSingleProduct } from "../../stores/store";
 
-    import Icon from 'svelte-icons-pack/Icon.svelte';
+    import Icon from "svelte-icons-pack/Icon.svelte"
+    import FaMinus from 'svelte-icons-pack/fa/FaSolidMinus';
+    import FiMinus from 'svelte-icons-pack/fi/FiMinus';
 
-    import FaPlus from 'svelte-icons-pack/fa/FaSolidPlus';
     export let item;
 
 </script>
 
-<button type="button" class="button-addToCart"
-    on:click={() => addProduct(item, item.size)}
-    >
-    <Icon src={FaPlus}  className="button-addToCart-icon" />
+<button type="button" on:click={() => removeSingleProduct(item)} class="button-removeFromCart">
+    <Icon src={FaMinus} color="white" />
 </button>
 
 <style lang="scss">
-    .button-addToCart {
+    .button-removeFromCart {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,8 +23,8 @@
         color: var(--white500);
         font-size: 1.5rem;
         border: 0.2rem solid var(--black500);
-        border-top-right-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
         background-color: var(--black500);
         transition: var(--transition);
         cursor: pointer;

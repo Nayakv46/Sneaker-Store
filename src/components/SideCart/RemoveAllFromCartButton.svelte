@@ -1,5 +1,5 @@
 <script>
-import { removeAllProduct } from "../stores/store";
+import { removeAllProduct } from "../../stores/store";
 
 import Icon from 'svelte-icons-pack/Icon.svelte';
 import IoClose from 'svelte-icons-pack/io/IoClose';

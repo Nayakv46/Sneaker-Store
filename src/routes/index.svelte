@@ -1,7 +1,7 @@
 <script>
     import Products from "../assets/Products";
-  import FeaturedProduct from "../components/HomePage/FeaturedProduct.svelte";
-    import ProductItem from "../components/ProductItem.svelte";
+    import FeaturedProducts from "../components/HomePage/FeaturedProducts.svelte";
+
 
     import { ProductsStore } from "../stores/store";
 
@@ -11,16 +11,10 @@
 <main class="hero">
 
   <div class="hero__content">
-    <FeaturedProduct />
+    <FeaturedProducts />
     
   </div>
 
-  <div class="product__wrapper">
-
-    {#each Products as product (product.id)}
-      <ProductItem product={product} />
-    {/each}
-  </div>
 
 </main>
 
@@ -31,8 +25,8 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    min-height: 100svh;
-    min-height: 100vh;
+    // min-height: 100svh;
+    // min-height: 100vh;
     padding: var(--wrapper-padding);
 
     &__content {

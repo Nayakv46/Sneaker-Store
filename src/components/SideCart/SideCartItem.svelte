@@ -1,9 +1,9 @@
 <script>
     export let product;
 
-    import Products from "../assets/Products";
+    import Products from "../../assets/Products";
 
-    import { removeSingleProduct, updateProductCount, addProduct } from "../stores/store";
+    import { removeSingleProduct, updateProductCount, addProduct } from "../../stores/store";
     import AddMultipleToCart from "./AddMultipleToCart.svelte";
     import AddToCartButton from "./AddToCartButton.svelte";
     import RemoveFromCartButton from "./RemoveFromCartButton.svelte";

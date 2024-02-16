@@ -1,8 +1,8 @@
 <script>
     export let item;
 
-    import { updateProductCount } from "../stores/store";
-    import { ProductsStore } from "../stores/store";
+    import { updateProductCount } from "../../stores/store";
+    import { ProductsStore } from "../../stores/store";
 
     let itemInCart;
 

@@ -1,5 +1,5 @@
 <script>
-    import { addMultipleProducts } from "../stores/store";
+    import { addMultipleProducts } from "../../stores/store";
     export let item;
     export let numberOfItems;
 

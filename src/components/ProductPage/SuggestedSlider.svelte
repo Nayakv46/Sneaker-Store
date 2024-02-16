@@ -11,8 +11,8 @@
     let filteredProducts = Products.filter((item) => item.sex === sex || item.sex === 'unisex')
 
     // EXPLANATION OF TWO #EACH BLOCKS
-    // rendering 5 items starting from randomly selected number
-    // if the list of products ends before rendering 5 -> render the left number of them starting from 0
+    // rendering 6 items starting from randomly selected number
+    // if the list of products ends before rendering 6 -> render the left number of them starting from 0
     const randomInt = (min, max) => {
         const minCeiled = Math.ceil(min);
         const maxFloored = Math.floor(max);
@@ -24,7 +24,7 @@
 
     const lowerIndex = randomNumber - 1;
 
-    const upperIndex = randomNumber + 4 + 1;
+    const upperIndex = randomNumber + 5 + 1;
 
     const diffrenceForSecond = upperIndex - filteredProducts.length;
 
