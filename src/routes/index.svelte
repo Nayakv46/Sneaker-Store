@@ -1,6 +1,7 @@
 <script>
     import Products from "../assets/Products";
     import FeaturedProducts from "../components/HomePage/FeaturedProducts.svelte";
+  import SuggestedSlider from "../components/ProductPage/SuggestedSlider.svelte";
 
 
     import { ProductsStore } from "../stores/store";
@@ -13,6 +14,7 @@
   <div class="hero__content">
     <FeaturedProducts />
     
+    <SuggestedSlider sex="male" />
   </div>
 
 
@@ -31,10 +33,10 @@
 
     &__content {
       flex: 1;
-      width: 100%;
+      // width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 4rem;
       max-width: var(--max-width);
     }
 

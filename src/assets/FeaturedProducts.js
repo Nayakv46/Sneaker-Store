@@ -1,14 +1,14 @@
-import JaFlyShoe from '../assets/images/JaFlyShoe.png';
-import JaFlyBg from '../assets/images/Ja_1_FlyBG.png';
+import JaFlyShoe from '../assets/images/featuredProductsImages/JaFlyShoe.png';
+import JaFlyBg from '../assets/images/featuredProductsImages/Ja_1_FlyBG.png';
 
-import AirForce07LXShoe from '../assets/images/air_force_07_lx_shoe.png';
-import AirForce07LXBg from '../assets/images/air_force_07_lxBG3.jpg';
+import AirForce07LXShoe from '../assets/images/featuredProductsImages/air_force_07_lx_shoe.png';
+import AirForce07LXBg from '../assets/images/featuredProductsImages/air_force_07_lxBG3.jpg';
 
-import AirJordan3Fear from '../assets/images/air_jordan_fear_shoe.png';
-import AirJordan3FearBG from '../assets/images/air_jordan_fear_bg.jpg';
+import AirJordan3Fear from '../assets/images/featuredProductsImages/air_jordan_fear_shoe.png';
+import AirJordan3FearBG from '../assets/images/featuredProductsImages/air_jordan_fear_bg.jpg';
 
-import AirJordan1LowSEShoe from '../assets/images/AirJordan1LowSE_shoe.png';
-import AirJordan1LowSEBG from '../assets/images/AirJordan1LowSEBG.jpg'
+import AirJordan1LowSEShoe from '../assets/images/featuredProductsImages/AirJordan1LowSE_shoe.png';
+import AirJordan1LowSEBG from '../assets/images/featuredProductsImages/AirJordan1LowSEBG.jpg'
 // background: #2980B9; background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); background: linear-gradient(to right, #FFFFFF40, #6DD5FA50, #2980B965);
 
 
