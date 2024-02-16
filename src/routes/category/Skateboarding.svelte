@@ -3,7 +3,7 @@
     import ProductTile from "../../components/Category/ProductTile.svelte";
     import Sorter from "../../components/Category/Sorter.svelte";
 
-    let filteredProducts = Products.filter((item) => item.category.indexOf("skating") > -1 );
+    let filteredProducts = Products.filter((item) => item.category.indexOf("skateboarding") > -1 );
 
     const handleSort = (event) => {
         if (event.detail === 'HL') {

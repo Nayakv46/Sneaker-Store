@@ -7,8 +7,9 @@
 
 
 <a href={`/category/${category.name}`} class="categoryTile">
-    <!-- <img class="categoryTile__image" src={itemImage} alt={item.name} /> -->
-
+    {#if category.image}
+    <img class="categoryTile__image" src={category.image} alt={category.name} />
+    {/if}
     <div class="categoryTile__info">
 
         <div class="categoryTile__description">
@@ -40,8 +41,15 @@
         scroll-snap-align: start;
 
         &__image {
-            width: 100%;
-            height: auto;
+            max-width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            filter: grayscale(1);
+            transition: var(--transition);
+
+            &:hover {
+                filter: grayscale(0);
+            }
         }
 
         &__description {
@@ -51,7 +59,7 @@
 
             &-name {
                 font-size: 2rem;
-                // font-weight: 500;
+                font-weight: 500;
                 text-transform: capitalize;
             }
         }

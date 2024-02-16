@@ -110,7 +110,7 @@
             gap: 1.5rem;
             scroll-snap-type: x mandatory;
             overflow-x: auto;
-            padding-bottom: 1rem;
+            padding-bottom: 2rem;
             scroll-behavior: smooth;
 
             &::-webkit-scrollbar-thumb{

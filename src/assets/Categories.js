@@ -1,32 +1,40 @@
+import basketball_img from '../assets/images/categoryImages/category_basketball.jpg';
+import running_img from '../assets/images/categoryImages/category_running.jpeg';
+import style_img from '../assets/images/categoryImages/category_style.avif'
+import training_img from '../assets/images/categoryImages/category_training.jpg';
+import golf_img from '../assets/images/categoryImages/category_golf.jpg';
+import tennis_img from '../assets/images/categoryImages/category_tennis.jpg';
+import tennis_img2 from '../assets/images/categoryImages/tennig_img.jpg';
+import skateboarding_img from '../assets/images/categoryImages/category_skateboarding.avif';
 
 let categories = [
     {
         name: 'basketball',
-        image: '',
+        image: basketball_img,
     },
     {
         name: 'running',
-        image: '',
+        image: running_img,
     },
     {
         name: 'style',
-        image: '',
+        image: style_img,
     },
     {
         name: 'training',
-        image: '',
+        image: training_img,
     },
     {
         name: 'golf',
-        image: '',
+        image: golf_img,
     },
     {
         name: 'tennis',
-        image: '',
+        image: tennis_img,
     },
     {
         name: 'skating',
-        image: '',
+        image: skateboarding_img,
     },
 ];
 

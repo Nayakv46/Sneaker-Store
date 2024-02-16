@@ -20,7 +20,7 @@
   import Training from "./routes/category/Training.svelte";
   import Golf from "./routes/category/Golf.svelte";
   import Tennis from "./routes/category/Tennis.svelte";
-  import Skating from "./routes/category/Skating.svelte";
+  import Skateboarding from "./routes/category/Skateboarding.svelte";
 </script>
 
 <Navbar />
@@ -37,7 +37,7 @@
   <Route path="/category/training" component={Training} />
   <Route path="/category/golf" component={Golf} />
   <Route path="/category/tennis" component={Tennis} />
-  <Route path="/category/skating" component={Skating} />
+  <Route path="/category/skating" component={Skateboarding} />
 
 
   <Route path="/product/:id" let:params>
