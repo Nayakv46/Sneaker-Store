@@ -20,7 +20,7 @@ const featuredProducts = [
         image: JaFlyShoe,
         background: JaFlyBg,
         backgroundPosition: "0% 0%",
-        descriptionBackground: "background: #9E350030;  background: -webkit-linear-gradient(to right, #9E350030, #0ABFBC60); background: linear-gradient(to right, #9E350030, #0ABFBC60);",
+        descriptionBackground: "background: #9E350030;  background: -webkit-linear-gradient(60deg, #9E350030, #0ABFBC60); background: linear-gradient(60deg, #9E350030, #0ABFBC60);",
         descriptionColor: "color: var(--white500);"
     },
     {
@@ -30,7 +30,7 @@ const featuredProducts = [
         image: AirForce07LXShoe,
         background: AirForce07LXBg,
         backgroundPosition: '0% 65%',
-        descriptionBackground: "background: #1a2a6c40; background: -webkit-linear-gradient(to right, #fdbb2d60, #b21f1f60, #1a2a6c40); background: linear-gradient(to right, #fdbb2d60, #b21f1f60, #1a2a6c40);",
+        descriptionBackground: "background: #1a2a6c40; background: -webkit-linear-gradient(150deg, #fdbb2d60, #b21f1f60, #1a2a6c40); background: linear-gradient(150deg, #fdbb2d60, #b21f1f60, #1a2a6c40);",
         descriptionColor: "color: var(--white500);"
     },
     {
@@ -40,7 +40,7 @@ const featuredProducts = [
         image: AirJordan3Fear,
         background: AirJordan3FearBG,
         backgroundPosition: '0% 0%',
-        descriptionBackground: "background: #c2150045; background: -webkit-linear-gradient(to right, #c2150045, #ffc50035); background: linear-gradient(to right, #c2150045, #ffc50035);",
+        descriptionBackground: "background: #c2150045; background: -webkit-linear-gradient(30deg, #c2150045, #ffc50035); background: linear-gradient(30deg, #c2150045, #ffc50035);",
         descriptionColor: "color: var(--white500);"
     },
     {
@@ -50,7 +50,7 @@ const featuredProducts = [
         image: AirJordan1LowSEShoe,
         background: AirJordan1LowSEBG,
         backgroundPosition: '0% 100%',
-        descriptionBackground: "background: #c2150045; background: -webkit-linear-gradient(to right, #c2150045, #ffc50035); background: linear-gradient(120deg, #45245425, #d42ce785, #45245425);",
+        descriptionBackground: "background: #c2150045; background: -webkit-linear-gradient(120deg, #45245425, #d42ce755, #45245425); background: linear-gradient(120deg, #45245425, #d42ce755, #45245425);",
         descriptionColor: "color: var(--white500);"
     },
 ];

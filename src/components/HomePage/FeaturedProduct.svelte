@@ -4,44 +4,67 @@
     import { quintInOut } from "svelte/easing";
     import { onMount } from "svelte";
 
-    let shownIndex = 3;
+    let shownIndex = 0;
 
-    // onMount(() => {
-    //   timeoutId;
-    // });
+    onMount(() => {
+      startInterval();
+    });
 
-    // const timeoutId = setInterval(() => {
-    //     if(shownIndex < featuredProducts.length - 1){
-    //         shownIndex++;
+    let timeoutId = null;
 
-    //     } else {
-    //         shownIndex = 0;
-    //     }
-    // }, 5000);
+    const stopInterval = () => {
+        clearInterval(timeoutId);
+    }
+
+    const startInterval = () => {
+        timeoutId = setInterval(() => {
+            if(shownIndex < featuredProducts.length - 1){
+                shownIndex++;
+
+            } else {
+                shownIndex = 0;
+            }
+        }, 5000);
+    }
+
+    const manualChange = (id) => {
+        shownIndex = id;
+    }
 
     $: shownIndex;
+
 </script>
 
-<div class="featured__wrapper">
+<div class="featured__wrapper"
+    role="slider"
+    on:mouseenter={() => stopInterval()}
+    on:mouseleave={() => startInterval()}
+    tabindex="0"
+    aria-valuenow={shownIndex}
+>
 
     {#each featuredProducts as item, index (index)}
     {#if index == shownIndex}
     <div class="featured__background"
-      transition:fade={{ duration: 1000, delay: 1000, easing: quintInOut }}
+      transition:fade={{ duration: 1000,  easing: quintInOut }}
       style="background-image: url('{item.background}'); background-position: {item.backgroundPosition};"
     >
 
     </div>
 
-    <img src={item.image}
-      alt={item.name}
-      class="featured__image"
-      in:fly={{ duration: 1000, delay: 1000, x: '100%', easing: quintInOut }}
-      out:fly={{ duration: 1000, x: '100%', easing: quintInOut }}
-    />
+    <a href="/product/{item.id}"
+        class="featured__link"
+    >
+        <img src={item.image}
+        alt={item.name}
+        class="featured__image"
+        in:fly={{ duration: 1000, x: '100%', easing: quintInOut }}
+        out:fly={{ duration: 1000, x: '100%', easing: quintInOut }}
+        />
+    </a>
 
     <div class="featured__info"
-        in:fade={{ duration: 1000, delay: 1000, easing: quintInOut, }}
+        in:fade={{ duration: 1000,  easing: quintInOut, }}
         out:fade={{ duration: 1000, easing: quintInOut, }}
         style="{item.descriptionBackground} {item.descriptionColor}"
     >
@@ -57,7 +80,18 @@
         </p>
     </div>
     {/if}
+
     {/each}
+
+    <div class="featured__navigation">
+        {#each featuredProducts as item, index (index)}
+            <button type="button"
+                class={`featured__navigation-dot ${shownIndex === index ? "featured__navigation-dot--active" : null}`}
+                on:click={() => manualChange(index)}
+                >
+            </button>
+        {/each}
+    </div>
 
 </div>
 
@@ -108,6 +142,10 @@
       //   clip-path: $rect;
       //   z-index: -1;
       // }
+    }
+
+    &__link {
+        z-index: 1;
     }
 
     &__image {
@@ -182,6 +220,59 @@
         font-weight: 500;
         // color: var(--black800);
 
+    }
+
+    &__navigation {
+        position: absolute;
+        bottom: 2rem;
+        left: calc(25% + 1rem);
+        display: flex;
+        gap: 1.5rem;
+        transform: translate(-50%,0%);
+
+        &-dot {
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(240,240,240,0.5);
+            border: 0.2rem solid var(--white600);
+            transition: var(--transition);
+            cursor: pointer;
+
+            &--active {
+                background-color: var(--white600);
+            }
+        }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured {
+        &__info {
+            top: 2rem;
+            max-width: calc(65% - 3rem);
+            transform: translate(0,0);
+        }
+
+        &__navigation {
+            // left: calc(32.5% + 0.5rem);
+        }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .featured {
+        &__info {
+            padding: 1rem 2rem;
+            max-width: 100%;
+        }
+        
+        &__description {
+            display: none;
+        }
+
+        
     }
   }
 </style>
