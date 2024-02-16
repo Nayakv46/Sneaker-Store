@@ -78,6 +78,7 @@
         <p class="featured__description">
             {item.description}
         </p>
+
     </div>
     {/if}
 
@@ -229,6 +230,7 @@
         display: flex;
         gap: 1.5rem;
         transform: translate(-50%,0%);
+        z-index: 2;
 
         &-dot {
             width: 1.3rem;
@@ -254,25 +256,84 @@
             max-width: calc(65% - 3rem);
             transform: translate(0,0);
         }
-
-        &__navigation {
-            // left: calc(32.5% + 0.5rem);
-        }
     }
   }
 
   @media screen and (max-width: 650px) {
     .featured {
+
+        &__wrapper {
+            border-radius: 2rem;
+        }
+
+        &__background {
+            border-radius: 2rem;
+        }
         &__info {
             padding: 1rem 2rem;
             max-width: 100%;
+            border-radius: 1rem;
         }
         
         &__description {
             display: none;
         }
 
-        
+        // &__image {
+        //     right: 0rem;
+        //     width: 75%;
+        //     max-height: 15rem;
+        // }
+
+        &__navigation {
+            flex-direction: column;
+            left: 2rem;
+            top: calc(50%);
+            transform: translate(0%, -50%);
+            height: max-content;
+        }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .featured {
+        &__image {
+            bottom: 4rem;
+            right: 4rem;
+            width: calc(65% - 2 * 2rem);
+            transform: rotate(0);
+        }
+
+        &__navigation {
+            left: 50%;
+            top: auto;
+            right: auto;
+            flex-direction: row;
+            transform: translate(-50%, 0);
+        }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .featured{
+        &__info {
+            top: 1rem;
+            left: 1rem;
+        }
+
+        &__image {
+            bottom: 2.5rem;
+            right: 2.5rem;
+        }
+
+        &__navigation {
+            bottom: 1rem;
+
+            &-dot {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
     }
   }
 </style>
