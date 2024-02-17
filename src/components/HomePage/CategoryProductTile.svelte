@@ -44,10 +44,12 @@
             max-width: 100%;
             aspect-ratio: 1/1;
             object-fit: cover;
+            -webkit-filter: grayscale(1);
             filter: grayscale(1);
             transition: var(--transition);
 
             &:hover {
+                -webkit-filter: grayscale(0);
                 filter: grayscale(0);
             }
         }

@@ -157,6 +157,7 @@
       max-height: 25rem;
       height: auto;
       object-fit: contain;
+      -webkit-filter: drop-shadow(0.5rem 1rem 1.5rem rgba(0,0,0,0.8));
       filter: drop-shadow(0.5rem 1rem 1.5rem rgba(0,0,0,0.8));
       transform: rotate(-15deg);
     }
@@ -174,6 +175,7 @@
         border-radius: 2rem;
         color: var(--black600);
         transform: translate(0, -50%);
+        -webkit-backdrop-filter: blur(0.4rem);
         backdrop-filter: blur(0.4rem);
     }
 

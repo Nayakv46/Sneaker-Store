@@ -9,9 +9,9 @@
         const slider = document.querySelector(".categorySlider__items");
 
         if(side === 'prev') {
-            slider.scrollLeft = slider.scrollLeft - 150;
+            slider.scrollLeft = slider.scrollLeft - 200;
         } else {
-            slider.scrollLeft = slider.scrollLeft + 150;
+            slider.scrollLeft = slider.scrollLeft + 200;
         }
     }
 </script>
