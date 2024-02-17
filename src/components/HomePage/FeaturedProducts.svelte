@@ -111,10 +111,10 @@
     }
 
     &__background {
-      $border: 2rem;
-      $blur: blur(1rem);
-      $rect: inset(0 round var(--r));
-      --r: 4rem;
+    //   $border: 2rem;
+    //   $blur: blur(1rem);
+    //   $rect: inset(0 round var(--r));
+    //   --r: 4rem;
 
       position: absolute;
       width: 100%;
@@ -157,9 +157,6 @@
       max-height: 25rem;
       height: auto;
       object-fit: contain;
-      // border: 0.1rem solid red;
-      // clip-path:margin-box;
-      // box-shadow: 0 0 1rem 1rem rgba(0,0,0,1);
       filter: drop-shadow(0.5rem 1rem 1.5rem rgba(0,0,0,0.8));
       transform: rotate(-15deg);
     }
@@ -176,34 +173,6 @@
         padding: 2rem;
         border-radius: 2rem;
         color: var(--black600);
-        /* fallback for old browsers */
-        // background: #12c2e9; 
-        // /* Chrome 10-25, Safari 5.1-6 */
-        // background: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f64f59); 
-        // /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        // background: linear-gradient(to right, #12c2e940, #c471ed40, #f64f5940); 
-        // background: #b92b27;  /* fallback for old browsers */
-        // background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
-        // background: linear-gradient(to right, #1565C040, #b92b2740); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        // background: #009FFF;  /* fallback for old browsers */
-        // background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
-        // background: linear-gradient(to right, #ec2F4B40, #009FFF40); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        // background: #23074d;  /* fallback for old browsers */
-        // background: -webkit-linear-gradient(to right, #cc5333, #23074d);  /* Chrome 10-25, Safari 5.1-6 */
-        // background: linear-gradient(to right, #cc533340, #23074d40); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        // background: #1a2a6c;  /* fallback for old browsers */
-        // background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
-        // background: linear-gradient(to right, #fdbb2d40, #b21f1f40, #1a2a6c40); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        // background: #C33764;  /* fallback for old browsers */
-        // background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
-        // background: linear-gradient(to right, #1D267140, #C3376440); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        // background: #ef32d9;  /* fallback for old browsers */
-        // background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
-        // background: linear-gradient(to right, #89fffd40, #ef32d940); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
-
         transform: translate(0, -50%);
         backdrop-filter: blur(0.4rem);
     }
@@ -219,8 +188,6 @@
 
     &__description {
         font-weight: 500;
-        // color: var(--black800);
-
     }
 
     &__navigation {
@@ -251,6 +218,7 @@
 
   @media screen and (max-width: 800px) {
     .featured {
+
         &__info {
             top: 2rem;
             max-width: calc(65% - 3rem);
@@ -269,12 +237,13 @@
         &__background {
             border-radius: 2rem;
         }
+
         &__info {
             padding: 1rem 2rem;
-            max-width: 100%;
+            max-width: calc(100% - 4rem);
             border-radius: 1rem;
         }
-        
+
         &__description {
             display: none;
         }
@@ -300,6 +269,7 @@
         &__wrapper {
             aspect-ratio: 10/6;
         }
+
         &__image {
             bottom: 4rem;
             right: 4rem;
@@ -320,10 +290,10 @@
   @media screen and (max-width: 400px) {
     .featured{
 
-        
         &__info {
             top: 1rem;
             left: 1rem;
+            max-width: calc(100% - 2rem);
         }
 
         // &__image {

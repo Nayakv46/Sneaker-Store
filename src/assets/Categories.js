@@ -1,6 +1,7 @@
 import basketball_img from '../assets/images/categoryImages/category_basketball.jpg';
 import running_img from '../assets/images/categoryImages/category_running.jpeg';
 import style_img from '../assets/images/categoryImages/category_style.avif'
+import style_img2 from '../assets/images/categoryImages/category_style2.jpg';
 import training_img from '../assets/images/categoryImages/category_training.jpg';
 import golf_img from '../assets/images/categoryImages/category_golf.jpg';
 import tennis_img from '../assets/images/categoryImages/category_tennis.jpg';
@@ -18,7 +19,7 @@ let categories = [
     },
     {
         name: 'style',
-        image: style_img,
+        image: style_img2,
     },
     {
         name: 'training',

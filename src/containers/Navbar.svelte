@@ -85,7 +85,7 @@
         width: 100%;
         padding: 1rem 2rem;
         background-color: var(--white700);
-        border-bottom: 0.4rem solid var(--black600);
+        box-shadow: 0 0 1.5rem 0.3rem rgba(17,17,17,0.3);
         z-index: 100;
 
 

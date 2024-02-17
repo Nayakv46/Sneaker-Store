@@ -9,7 +9,6 @@ import AirJordan3FearBG from '../assets/images/featuredProductsImages/air_jordan
 
 import AirJordan1LowSEShoe from '../assets/images/featuredProductsImages/AirJordan1LowSE_shoe.png';
 import AirJordan1LowSEBG from '../assets/images/featuredProductsImages/AirJordan1LowSEBG.jpg'
-// background: #2980B9; background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); background: linear-gradient(to right, #FFFFFF40, #6DD5FA50, #2980B965);
 
 
 const featuredProducts = [
