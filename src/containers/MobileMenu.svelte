@@ -26,6 +26,27 @@
         <li>
             <a href="/category/women" class="mobileNavbar__links-link">Women</a>
         </li>
+        <li>
+            <a href="/category/basketball" class="mobileNavbar__links-link">Basketball</a>
+        </li>
+        <li>
+            <a href="/category/running" class="mobileNavbar__links-link">Running</a>
+        </li>
+        <li>
+            <a href="/category/style" class="mobileNavbar__links-link">Style</a>
+        </li>
+        <li>
+            <a href="/category/training" class="mobileNavbar__links-link">Training</a>
+        </li>
+        <li>
+            <a href="/category/golf" class="mobileNavbar__links-link">Golf</a>
+        </li>
+        <li>
+            <a href="/category/tennis" class="mobileNavbar__links-link">Tennis</a>
+        </li>
+        <li>
+            <a href="/category/skating" class="mobileNavbar__links-link">Skating</a>
+        </li>
     </ul>
 </div>
 
@@ -91,6 +112,11 @@
             &-link {
                 color: var(--black600);
                 text-decoration: none;
+                transition: var(--transition);
+
+                &:hover {
+                    color: var(--gray700);
+                }
             }
         }
 
