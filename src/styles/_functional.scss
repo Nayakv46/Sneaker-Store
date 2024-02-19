@@ -1,12 +1,15 @@
 // styles for when the scroll is shown and hidden
-body {
-    &:has(.sideCart__overlay),
-    &:has(.mobileNavbar__overlay){
-        overflow: hidden;
-        padding-right: 15px;
+@media screen and (min-width: 991px){
 
-        & .navbar {
-            padding: 1rem 3.5rem 1rem 2rem;
+    body {
+        &:has(.sideCart__overlay),
+        &:has(.mobileNavbar__overlay){
+            overflow: hidden;
+            padding-right: 15px;
+            
+            & .navbar {
+                padding: 1rem 3.5rem 1rem 2rem;
+            }
         }
     }
 }
