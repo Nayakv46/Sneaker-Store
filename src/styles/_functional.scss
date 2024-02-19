@@ -10,3 +10,12 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 991px) {
+    body {
+        &:has(.sideCart__overlay),
+        &:has(.mobileNavbar__overlay) {
+            overflow: hidden;
+        }
+    }
+}
