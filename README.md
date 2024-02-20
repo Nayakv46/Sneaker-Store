@@ -9,20 +9,20 @@
 
 <div align="center">
   <h4>Home Page</h4>
-  <img src="https://github.com/Nayakv46/Dashboard/assets/130490621/d724f304-e35d-480b-920f-b9d0ca8fcfb1" />
+  <img src="https://github.com/Nayakv46/Sneaker-Store/assets/130490621/48b77705-868e-445e-a118-f08344aed73b" />
 </div>
 
 <div align="center">
   <h4>Category Page</h4>
-  <img src="https://github.com/Nayakv46/Dashboard/assets/130490621/d724f304-e35d-480b-920f-b9d0ca8fcfb1" />
+  <img src="https://github.com/Nayakv46/Sneaker-Store/assets/130490621/0744cffd-a375-4195-a19b-9acfce9f5fae" />
 </div>
 
 <div align="center">
   <h4>Product Page</h4>
-  <img src="https://github.com/Nayakv46/Dashboard/assets/130490621/d724f304-e35d-480b-920f-b9d0ca8fcfb1" />
+  <img src="https://github.com/Nayakv46/Sneaker-Store/assets/130490621/dbf51a92-0c16-46ec-9047-8fd7c447519d" />
 </div>
 
 <div align="center">
   <h4>Checkout Page</h4>
-  <img src="https://github.com/Nayakv46/Dashboard/assets/130490621/d724f304-e35d-480b-920f-b9d0ca8fcfb1" />
+  <img src="https://github.com/Nayakv46/Sneaker-Store/assets/130490621/b25418f9-09d1-45f5-94a3-d8305fb6c17f" />
 </div>
