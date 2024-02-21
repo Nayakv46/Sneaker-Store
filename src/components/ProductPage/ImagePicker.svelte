@@ -26,6 +26,12 @@
         }
     }
 
+    const handleByKeyChange = (event) => {
+        if(event.key == "n") {
+            handleNextImage();
+        }
+    }
+
 </script>
 
 
@@ -33,7 +39,14 @@
     <div class="imagePicker__list">
 
             {#each item.images as image, id (image+id)}
-                <div class="imagePicker__list-item" on:mouseenter={() => handleImageChange(id)}>
+                <div class="imagePicker__list-item"
+                    on:click={() => handleImageChange(id)}
+                    on:keydown={(event) => handleByKeyChange(event)}
+                    on:mouseenter={() => handleImageChange(id)}
+                    role="switch"
+                    aria-checked="mixed"
+                    tabindex="0"
+                >
                     <img src={image} alt={image} class="imagePicker__smallImage" />
                     <div class="imagePicker__list-overlay"></div>
                 </div>
