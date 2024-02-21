@@ -30,7 +30,7 @@
 
 <style lang="scss">
     .popUp {
-        position: absolute;
+        position: fixed;
         top: 15rem;
         left: 50%;
         display: flex;

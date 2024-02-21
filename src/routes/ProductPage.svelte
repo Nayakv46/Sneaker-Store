@@ -66,10 +66,6 @@
                 <div class="productPage__additionalInfo">
                     <p class="productPage__additionalInfo-text">{product.descriptionLong.text}</p>
                     {#if product.descriptionLong.listed}
-                    <!-- <hr />
-                        <p>{product.descriptionLong.listed.shown}</p>
-                        <hr />
-                        <p>{product.descriptionLong.listed.style}</p> -->
                         <ul class="productPage__additionalInfo-ul">
                             {#each Object.entries(product.descriptionLong.listed) as [listItemKey, listItemValue]}
                             <li class="productPage__additionalInfo-li">{`${listItemKey}: ${listItemValue}`}</li>
@@ -161,10 +157,6 @@
             gap: 3rem;
             font-weight: 500;
             line-height: 1.5em;
-
-            // &-text {
-            //     // color: var(--black800);
-            // }
 
             &-ul {
                 display: flex;
