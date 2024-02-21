@@ -58,14 +58,12 @@
         <img src={item.image}
         alt={item.name}
         class="featured__image"
-        in:fly={{ duration: 1000, x: '100%', easing: quintInOut }}
-        out:fly={{ duration: 1000, x: '100%', easing: quintInOut }}
+        transition:fly={{ duration: 1000, x: '100%', easing: quintInOut }}
         />
     </a>
 
     <div class="featured__info"
-        in:fade={{ duration: 1000,  easing: quintInOut, }}
-        out:fade={{ duration: 1000, easing: quintInOut, }}
+        transition:fade={{ duration: 1000,  easing: quintInOut, }}
         style="{item.descriptionBackground} {item.descriptionColor}"
     >
 
@@ -105,44 +103,16 @@
       aspect-ratio: 2/1;
       max-height: 50rem;
       border-radius: 4rem;
-      // border: 0.5rem solid red;
       box-shadow: 0 0 2rem 0.2rem rgba(0,0,0,0.3);
       overflow: hidden;
     }
 
     &__background {
-    //   $border: 2rem;
-    //   $blur: blur(1rem);
-    //   $rect: inset(0 round var(--r));
-    //   --r: 4rem;
-
       position: absolute;
       width: 100%;
       height: 100%;
-      // border: $border solid rgba(0,0,0,0.05);
       border-radius: var(--r);
       background-size: cover;
-      // background-position: 50% 40%;
-      // background-origin: border-box;
-      // background-clip: padding-box;
-
-      // &:before {
-      //   content: '';
-      //   position: absolute;
-      //   top: -$border;
-      //   right: -$border;
-      //   left: -$border;
-      //   bottom: -$border;
-      //   border-color: transparent;
-      //   border-radius: inherit;
-      //   background: inherit;
-      //   background-clip: border-box;
-      //   -webkit-filter: $blur;
-      //   filter: $blur;
-      //   -webkit-clip-path: $rect;
-      //   clip-path: $rect;
-      //   z-index: -1;
-      // }
     }
 
     &__link {
@@ -250,12 +220,6 @@
             display: none;
         }
 
-        // &__image {
-        //     right: 0rem;
-        //     width: 75%;
-        //     max-height: 15rem;
-        // }
-
         &__navigation {
             flex-direction: column;
             left: 2rem;
@@ -297,11 +261,6 @@
             left: 1rem;
             max-width: calc(100% - 2rem);
         }
-
-        // &__image {
-            // bottom: 2.5rem;
-            // right: 2.5rem;
-        // }
 
         &__navigation {
             bottom: 1rem;
